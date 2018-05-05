@@ -44,3 +44,4 @@
 
 \usepackage[pdftex]{graphicx}
 \usepackage[raiselinks=true]{hyperref}
+\usepackage{parskip}

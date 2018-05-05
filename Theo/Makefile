@@ -8,14 +8,14 @@ ifeq ($(VERBOSE), 1)
 	BUILD := $(BUILDV)
 endif
 
-.PHONY: all show upload share clean data build
+.PHONY: all show upload share clean build
 
 all: | $(FILE).pdf show
 
 build: $(FILE).pdf
 
-data:
-	make -C data -j 6
+$(FILE).pdf: $(FILE).tex $(svgimtargets) $(shell find chap -type f)
+	$(BUILD) $(FILE).tex
 
 show:
 	xdg-open $(FILE).pdf > /dev/null 2>&1 &
