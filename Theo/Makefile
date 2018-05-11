@@ -14,7 +14,7 @@ all: | $(FILE).pdf show
 
 build: $(FILE).pdf
 
-$(FILE).pdf: $(FILE).tex $(svgimtargets) $(shell find chap -type f)
+$(FILE).pdf: $(FILE).tex $(svgimtargets) $(shell find .. -type f)
 	$(BUILD) $(FILE).tex
 
 show:

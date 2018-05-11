@@ -32,3 +32,35 @@ Für den Fall $E\gg m$ geht die Rapidität über in die sogen. \textbf{Pseudorap
 
 Der diferenzielle Wirkungsquerschnitt $\nicefrac{\text{d}\sigma}{\text{d}y}$ ist forminvariant unter Lorentzboosts entlang der Strahlachse.
 Das gleiche gilt in guter Näherung auch für $\nicefrac{\text{d}\sigma}{\text{d}\eta}$, allerdings ist $\eta$ einfacher zu messen, da man nur die Flugrichtung des Teilchens durch den Detektor bestimmen muss.
+
+\subsection{Wirkungsquerschnitte}
+Streuexperimente dienen dazu, Mikroskopie über das sichtbare hinaus zu betreiben und so Erkenntnisse über die Struktur der Materie zu gewinnen.
+Man unterscheidet dabei zwischen \textbf{elastischer} ($\sum E_{\text{kin,}i} = \sum E_{\text{kin,}f}$) und \textbf{inelastischer Streuung} ($\sum E_{\text{kin,}i} \neq \sum E_{\text{kin,}f}$, z.B. durch Anregung eines Atoms durch Teil der kinetischen Energie).
+
+Der Wirkungsquerschnitt ist die wichtigste Größe bei solchen Experimenten und ist ein Maß dafür, wie wahrscheinlich eine Wechselwirkung zwischen dem Projektil und dem Target ist.
+Experimentell gilt
+\begin{equation*}
+	\sigma = \frac{N_\text{obs}-N_\text{bg}}{\mathcal{L}\cdot\varepsilon\cdot A}\cdot\frac{1}{T},
+\end{equation*}
+mit der weiteren wichtigen Detektorkenngröße, der \textbf{Luminosität} $\mathcal{L}$.
+
+\subsubsection{Rutherford-Wirkungsquerschnitt}
+Der Rutherfordsche Wirkungsquerschnitt gibt den theoretischen Wirkungsquerschnitt unter Vernachlässigung von Spins und Targetrückstoß an
+\begin{equation}\label{eq:ruth_sigma}
+	\left(\diff[\sigma]{\Omega}\right)_\text{Ruth} = \left(\frac{zZe^2}{4\pi\epsilon_0\cdot 4E_\text{kin}}\right)^2\cdot\frac{1}{\sin^4\frac{\theta}{2}}.
+\end{equation}
+
+Definiert man den Impulsübertrag
+\begin{equation*}
+	\mvec{q} = \mvec{p}-\mvec{p'},
+\end{equation*}
+so lässt sich \autoref{eq:ruth_sigma} auch schreiben als
+\begin{equation*}
+	\left(\diff[\sigma]{\Omega}\right)_\text{Ruth} = \frac{4zZ\alpha^2(\hbar c)^2 E'^2}{|\mvec{q}c|^4}.
+\end{equation*}
+Durch die $\nicefrac{1}{q^4}$-Abhängigkeit ist es schwer, Prozesse mit hohem Impulsübertrag zu messen, da ein Fehler auf $\mvec{q}$ sich erheblich auf die Ergebnisse auswirkt.
+
+Beachtet man, dass für kleine Massen $E\approx pc$ gilt, folgt daraus der \textbf{relativistische Rutherford-Wirkungsquerschnitt}
+\begin{equation*}
+	\left(\diff[\sigma]{\Omega}\right)_\text{Ruth} = \left(\frac{zZ\alpha\hbar c}{4mc^2(\gamma-1)}\right)^2\cdot\left(\frac{4p_1p_3}{q^2}\right)^2.
+\end{equation*}
