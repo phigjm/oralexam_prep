@@ -64,3 +64,24 @@ Beachtet man, dass für kleine Massen $E\approx pc$ gilt, folgt daraus der \text
 \begin{equation*}
 	\left(\diff[\sigma]{\Omega}\right)_\text{Ruth} = \left(\frac{zZ\alpha\hbar c}{4mc^2(\gamma-1)}\right)^2\cdot\left(\frac{4p_1p_3}{q^2}\right)^2.
 \end{equation*}
+
+\subsubsection{Mott-Wirkungsquerschnitt}
+Ist nun der Spin des Projektiles $\neq 0$, ergibt sich daraus der \textbf{Mott-Wirkungsquerschnitt}
+\begin{equation*}
+	\left(\diff[\sigma]{\Omega}\right)_\text{Mott} = \left(\diff[\sigma]{\Omega}\right)_\text{Ruth}\cdot\underbrace{\frac{E_\text{f}}{E}}_\text{Targetrückstoß}\cdot\underbrace{\left(1-\beta^2\sin^2\frac{\theta}{2}\right)}_\text{Spin d. Projektils}.
+\end{equation*}
+Für $\beta\rightarrow 1$ geht der Wirkungsquerschnitt über in
+\begin{equation*}
+	\left(\diff[\sigma]{\Omega}\right)_\text{Mott}= \rightarrow\left(\diff[\sigma]{\Omega}\right)_\text{Ruth}\cdot\frac{E_\text{f}}{E}\cdot\cos^2\frac{\theta}{2}.
+\end{equation*}
+Dabei sieht man, dass für $\beta\rightarrow 1$ ein Streuwinkel von 180° nicht möglich ist.
+Dies folgt aus der Helizitätserhaltung: Bei einer Rückstreuung müsste auch der Spin flippen, damit die Projektion des Spins auf die Flugbahn (Helizität) erhalten bleibt. Dies ist jedoch an einem spinlosen Target aufgrund der Drehimpulserhaltung nicht möglich.
+
+\subsubsection{Dirac-Wirkungsquerschnitt}
+Bei der \textbf{Dirac-Streuung} haben nun beide Streupartner einen Spin.
+Der Wirkungsquerschnitt wird dementsprechend modifiziert
+\begin{equation*}
+	\left(\diff[\sigma]{\Omega}\right)_\text{Dirac} = \left(\diff[\sigma]{\Omega}\right)_\text{Mott}\cdot\left(1+2\tau\tan^2\frac{\theta}{2}\right),
+\end{equation*}
+wobei $\tau = \frac{Q^2}{4M^2c^2}$.
+Damit kann allerdings keine Streuung z.B. an realen Protonen beschrieben werden, da hier angenommen wird, dass das \textbf{punktförmige} ''Dirac-Proton'' ein herkömmliches magnetisches Moment von $\mu=\frac{e}{2m}$ besitzt.
