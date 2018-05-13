@@ -33,7 +33,7 @@ Für den Fall $E\gg m$ geht die Rapidität über in die sogen. \textbf{Pseudorap
 Der diferenzielle Wirkungsquerschnitt $\nicefrac{\text{d}\sigma}{\text{d}y}$ ist forminvariant unter Lorentzboosts entlang der Strahlachse.
 Das gleiche gilt in guter Näherung auch für $\nicefrac{\text{d}\sigma}{\text{d}\eta}$, allerdings ist $\eta$ einfacher zu messen, da man nur die Flugrichtung des Teilchens durch den Detektor bestimmen muss.
 
-\subsection{Wirkungsquerschnitte}
+\subsection{Elastische Wirkungsquerschnitte (punktförmige Teilchen)}
 Streuexperimente dienen dazu, Mikroskopie über das sichtbare hinaus zu betreiben und so Erkenntnisse über die Struktur der Materie zu gewinnen.
 Man unterscheidet dabei zwischen \textbf{elastischer} ($\sum E_{\text{kin,}i} = \sum E_{\text{kin,}f}$) und \textbf{inelastischer Streuung} ($\sum E_{\text{kin,}i} \neq \sum E_{\text{kin,}f}$, z.B. durch Anregung eines Atoms durch Teil der kinetischen Energie).
 
@@ -85,3 +85,37 @@ Der Wirkungsquerschnitt wird dementsprechend modifiziert
 \end{equation*}
 wobei $\tau = \frac{Q^2}{4M^2c^2}$.
 Damit kann allerdings keine Streuung z.B. an realen Protonen beschrieben werden, da hier angenommen wird, dass das \textbf{punktförmige} ''Dirac-Proton'' ein herkömmliches magnetisches Moment von $\mu=\frac{e}{2m}$ besitzt.
+
+\subsection{Elastische Wirkungsquerschnitte (ausgedehnte Teilchen)}
+
+\begin{figure}
+	\centering
+	\includegraphics[width=.5\textwidth]{./img/formfaktoren_rho.jpeg}
+	\caption{\textbf{Formfaktoren und zugehörige Ladungsverteilungen}}
+	\label{fig:formfaktoren}
+\end{figure}
+
+\subsubsection{Formfaktoren}
+In der Realität stellt man bei Streuexperimenten einen Unterschied zwischen dem theoretischen und gemessenen Mott-Wirkungsquerschnitt fest.
+Dabei konvergieren die gemessenen Wirkungsquerschnitte nur für den Grenzfall verschwindender Impulsüberträge gegen den theoretischen Mott-Querschnitt und werden mit steigendem $|\mvec{q}|$ systematisch kleiner.
+Der Grund hierfür ist, dass die Nukleonen und Kerne in Wirklichkeit ausgedehnte Objekte sind.
+Somit ''sieht'' das Elektron bei der Streuung mit größerem $|\mvec{q}|$ nicht mehr die gesamte Ladung des Targets.
+Der räumlichen Ausdehnung kann durch einen \textbf{Formfaktor $F(q^2)$} Rechnung getragen werden.
+Da es bei kugelsymmetrischen Systemen keine Vorzugsrichtung gibt, hängt der Formfaktor dabei nur vom Betrag von $\mvec{q}$ ab.
+Der Zusammenhang zwischen dem so angepassten Wirkungsquerschnitt und dem Mott-Wirkungsquerschnitt ist durch
+\begin{equation*}
+	\left(\diff[\sigma]{\Omega}\right)_\text{exp} = \left(\diff[\sigma]{\Omega}\right)_\text{exp}\cdot \left|F(q^2)\right|^2
+\end{equation*}
+gegeben.
+
+Dabei kann in \textsc{Born}scher Näherung und unter Vernachlässigung des Targetrückstoßes der Formfaktor durch die Fouriertransformierte der Ladungsverteilung als
+\begin{equation*}
+	F(q^2) = \int{\text{d}^3x\ \rho(\mvec{x})e^{\frac{i}{\hbar}\mvec{q}\cdot\mvec{x}}}
+\end{equation*}
+ausgedrückt werden.
+
+Theoretisch ließe sich durch inverse Fouriertransformation so Rückschluss auf die radiale Ladungsverteilung des Targets ziehen.
+Dies ist in der Praxis jedoch nur beschränkt möglich, da der Wirkungsquerschnitt für steigende $|\mvec{q}|$ sehr schnell abnimmt und der Formfaktor generell nur über einen beschränkten Bereich bestimmt werden kann.
+Dies resultiert daraus, dass der mögliche Impulsübertrag durch die Strahlenergie beschränkt ist.
+Daher wählt man für gewöhnlich eine Parametrisierung von $\rho(r)$, bestimmt daraus den Formfaktor und variiert danach so lange die Parameter, bis die Modellfunktion mit den Messdaten übereinstimmt.
+\autoref{fig:formfaktoren} zeigt Beispiele für verschiedene $\rho-F$ Paare.
