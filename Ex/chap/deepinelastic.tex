@@ -16,3 +16,55 @@ So ließen sich am CERN Strahlenergien von bis zu \SI{280}{\GeV} erzeugen, am FN
 Die letzte Generation wurde am HERA-Speicherring realisiert.
 Dort zirkulieren Elektronen bzw. Positronen mit einer Energie von \SI{27.6}{\GeV} und Protonen mit einer maximalen Energie von \SI{920}{\GeV} in separaten Speicherringen und werden an einer Stelle zur Kollision gebracht.
 Damit lassen sich Strahlenergien im fünfstelligen \si{\GeV}-Bereich erreichen.
+
+\section{Tiefinelastische Anregungen}
+\begin{figure}
+	\centering
+	\includegraphics{./img/resonance_deep.pdf}
+	\caption{\textbf{Spektrum einer Elektron-Proton-Streuung}}
+	\label{fig:resonance}
+\end{figure}
+\autoref{fig:resonance} zeigt ein Elektron-Proton-Streuspektrum bei einer Elektronenergie von \SI{4.9}{\GeV} und einem Streuwinkel von \SI{10}{\degree}.
+Neben einem scharfen Maximum, das von der elastischen Streuung herrührt, sind weitere kleinere Maxima zu sehen.
+Diese resultieren aus inelastischen Anregungen des Protons.
+Man nennt diese angeregten Nukleonzustände auch \textbf{Nukleonresonanzen}.
+Die Tatsache, dass solche angeregten Zustände existieren, ist bereits ein Indiz dafür, dass das Nukleon ein zusammengesetztes System ist.
+
+\section{Strukturfunktionen}
+\begin{figure}
+	\centering
+	\includegraphics[width=.5\textwidth]{./img/formfactor_deep.pdf}
+	\caption{\textbf{Strukturfunktion $F_2$ des Protons als Funktion von $x$} bei verschiedenen $Q^2$-Werten im angegebenen Bereich}
+	\label{fig:formfactor_deep}
+\end{figure}
+Bei invarianten Massen $W = \left|\frac{p'}{c}\right|$ die etwa größer als \SI{2.5}{\GeV} sind, sieht man im Spektrum keine scharfen Resonanzen mehr, aber beobachtet eine vermehrte Erzeugung von Hadronen.
+Diese Prozesse heißen \textbf{tiefinelastische Streuung}.
+Man kann analog zur Rosenbluth-Formel den doppelten Wirkungsquerschnitt
+\begin{equation*}
+	\ddiff[\sigma]{\Omega}{E'} = \left(\diff[\sigma]{\Omega}\right)_\text{Mott}\cdot\left(W_2(Q^2,\nu) + 2W_1(Q^2,\nu)\cdot\tan^2\frac{\theta}{2}\right)
+\end{equation*}
+definieren.
+Diese Strukturfunktionen haben nun aufgrund der Anregungsenergie des Protons \textbf{zwei} freie Parameter.
+Anstelle der dimensionsbehafteten Funktionen $W_i$ benutzt man heutzutage nur noch die dimensionslosen Strukturfunktionen
+\begin{align*}
+	F_1(x,Q^2) &= Mc^2W_1(Q^2,\nu) \\
+	F_2(x,Q^2) &= \nu W_2(Q^2,\nu)
+\end{align*}
+mit den beiden Lorentzinvarianten Variablen $Q^2$ und $x=\frac{Q^2}{2Pq}=\frac{Q^2}{2M\nu}$.
+Man nennt $x$ auch die \textbf{Bjorkensche Skalenvariable}.
+Mit diesen neuen Größen lässt sich der Wirkungsquerschnitt lorentzinvariant
+\begin{equation*}
+	\ddiff[\sigma]{Q^2}{x} = \frac{4\pi\alpha^2\hbar^2}{Q^4}\left(\left(\frac{1-y}{x}-\frac{My}{2E}\right)F_2(Q^2,x) + y^2F_1(Q^2,x)\right)
+\end{equation*}
+schreiben.
+Dabei ist $y = \frac{Pq}{Pp}\stackrel{\text{Lab}}{=} 1-\frac{E'}{E}$, $P$ der Target-4-Impuls und $p$ der Projektil-4-Impuls.
+
+\autoref{fig:formfactor_deep} zeigt eine Messung der Strukturfunktion $F_2(x)$ bei verschiedenen $Q^2$-Werten im Bereich von \SIrange{2}{18}{\GeV}.
+Erstaunlicherweise bemerkt man, dass die Funktion eine kleine Abhängigkeit von $Q^2$ aufweist.
+Dies bedeutet allerdings, dass man an punktförmigen Teilchen gestreut hat ($\rightarrow$ Diskussion Rosenbluth-Plot).
+Also kann man die Folgerung machen, dass das Nukleon aus punktförmigen Konstituenten aufgebaut ist.
+Nimmt man an, dass für die Masse dieser Konstituenten $m_x = x\cdot m_p$ gilt und dass sie einen Spin von $\nicefrac{1}{2}$ haben, so folgt die \textbf{Callan-Gross-Beziehung}
+\begin{equation*}
+	2xF_1(x) = F_2(x).
+\end{equation*}
+Messungen bestätigen diese Beziehung, womit auch der Spin dieser sogenannten \textbf{Partonen} geklärt ist.
