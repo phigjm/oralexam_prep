@@ -15,7 +15,7 @@ Sie sind die leichtesten Teilchen, die in $\el\pos$-Reaktionen erzeugt werden k�
 \end{equation*}
 Myonen haben eine Masse von \SI{105.7}{\MeV} und durchdringen Materie aufgrund ihrer vergleichsweise hohen Masse und der fehlenden starken Wechselwirkung sehr leicht.
 Mit $\tau=\SI{2}{\micro\second}$ haben Myonen nach den Neutronen die längste Lebensdauer aller instabiler Elementarteilchen.
-
+\newpage
 \subsection{Tauonen}
 Wir die Schwerpunktsenergie weiter erhöht, so können $\tau^-\tau^+$-Paare erzeugt werden.
 Diese sind aber mit $\tau=\SI{3e-13}{\second}$ deutlich kurzlebiger als ihre Myon-Kollegen, weshalb sie in Detektoren nur über ihre Zerfallsprodukte nachgewiesen werden können:
@@ -28,12 +28,14 @@ Die Masse der Tauonen beträgt \SI{1777}{\GeV}.
 
 \subsection{Bhabha-Streuung}
 \begin{figure}
-	%\includegraphics{} //TODO: Insert graphic.
+	\centering
+	\includegraphics[width=.7\textwidth]{./img/bhabhaprocesses.pdf}
 	\caption{Links: $\el\pos$-Streuung, Rechts: Paarvernichtung/-erzeugung}
 	\label{fig:bhabha}
 \end{figure}
 \begin{figure}
-	%\includegraphics{} //TODO: Insert graphic.
+	\centering
+	\includegraphics[width=.7\textwidth]{./img/bhabhacross.pdf}
 	\caption{Wirkungsquerschnitt der $\el\pos$-Reaktionen}
 	\label{fig:crossbhabha}
 \end{figure}
@@ -53,3 +55,24 @@ Dieses Phänomen wird als \textbf{Leptonenuniversalität} bezeichnet und meint, 
 
 Da die obige Formel für den Wirkungsquerschnitt die Messdaten gut reproduziert, ist der Formfaktor dieser Reaktion Eins.
 Dies bedeutet, dass diese Leptonen in der Tat punktförmige Teilchen sind.
+
+\subsection{Resonanzen}
+Betrachtet man den Wirkungsquerschnitt für die Erzeugung von Myonenpaaren und Hadronen in $\el\pos$-Streuung, so findet man jeweils die $\nicefrac{1}{s}$.
+Dieser Funktion sind im hadronischen Ausgangskanal ausgeprägte Maxima überlagert, die man \textbf{Resonanzen} nennt.
+Man kann diesen Resonanzen wie bei ordinären Teilchen eine Masse und Quantenzahlen zuweisen.
+\autoref{fig:resonances} zeigt verschiedene Resonanz-Peaks.
+
+\subsection{Nichtresonante Erzeugung von Hadronen}
+Selbstverständlich können auch zwischen den Peaks Quark-Antiquark-Paare erzeugt werden.
+An die Primärquark-Antiquarks lagern sich dabei weitere Quark-Antiquark-Paare an und es entstehen Hadronen.
+Diesen Vorgang nennt man \textbf{Hadronisierung}.
+Natürlich können dabei nur Teilchen hadronisiert werden, deren Masse kleiner als die halbe zur Verfügung stehende Schwerpunktsenergie ist.
+Im Gegensatz zu Leptonen tragen die Quarks nicht eine volle Elementarladung, sondern nur drittelzahlige Ladungen $z_\text{q}\cdot\text{e}$, die vom jeweiligen Quark-Flavor abhängig sind.
+Da es ebenfalls 3 verschiedene Farbzustände gibt, geht in den Wirkungsquerschnitt noch der Faktor 3 mit ein.
+Normiert man nun den Wirkungsquerschnitt des hadronischen Kanals mit dem Myonpaar-Wirkungsquerschnitt, so ergibt sich das Verhältnis
+\begin{equation*}
+	R=\frac{\sum_q\sigma(\el\pos\rightarrowq\bar{q})}{\sigma(\el\pos\rightarrow\mu^-\mu^+)} = 3\cdot\sum_qz_\text{q}^2,
+\end{equation*}
+welcher experimentell sehr leicht durch $\el\pos$-Kollisionen zugänglich ist.
+Summiert werden bei obiger Formel nur die Ladungen der Quarks, für deren Erzeugung die Schwerpunktsenergie ausreicht.
+Diese Messung ist eine eindrucksvolle Bestätigung dafür, dass es genau 3 Farben gibt, denn bei obiger Herleitung wurde vorausgesetzt, dass es 3 Farben gibt, was die Messdaten hervorragend reproduziert.
