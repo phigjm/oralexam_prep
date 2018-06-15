@@ -21,3 +21,73 @@ Die erwähnten Austauschbosonen sind Vektorbosonen (Spin-1-Teilchen).
 
 \section{Geladene Ströme}
 Man kann geladene Ströme in 3 Klassen unterteilen: in \textit{leptonische}, \textit{semileptonische} und \textit{nichtleptonische Prozesse}.
+
+\subsection{Leptonische Prozesse}
+Wenn das W-Boson nur an Leptonen koppelt, spricht man von \textit{leptonischen Prozessen}:
+\begin{equation*}
+	l + \bar{\nu}_l \longleftrightarrow l' + \bar{\nu}_{l'}.
+\end{equation*}
+Beispiele:
+\begin{align*}
+	\tau^- &\rightarrow \mu^- + \bar{\nu}_\mu + \nu_\tau \\
+	\tau^- &\rightarrow \el + \bar{\nu}_e + \nu_\tau.
+\end{align*}
+
+\subsection{Semileptonische Prozesse}
+Bei \textit{semileptonischen Prozessen} koppelt das W-Boson sowohl an Quarks, als auch Leptonen:
+\begin{equation*}
+	q_1 + \bar{q}_2 \longleftrightarrow l + \bar{nu}_l.
+\end{equation*}
+Das wohl bekannteste Beispiel hierfür ist der $\upbeta$-Zerfall des Neutrons.
+
+\subsection{Nichtleptonische Prozesse}
+Diese Prozesse finden ohne Beteiligung von Leptonen statt:
+\begin{equation*}
+	q_1 + \bar{q}_2 \longleftrightarrow q_3 + \bar{q}_4.
+\end{equation*}
+Ein Beispiel für einen solchen Prozess ist der $K^+$-Zerfall in zwei Pionen:
+\begin{equation*}
+	K^+ \rightarrow \pi^0 + \pi^+.
+\end{equation*}
+
+\section{Universalität der schwachen Wechselwirkung}
+Anhand der Zerfallsbreiten des $\tau^-$-Zerfalls lässt sich zeigen, dass die schwache Wechselwirkung an Quarks und Leptonen mit der gleichen Kopplungskonstanten $g$ koppelt.
+Die Hauptzerfallskanäle sind
+\begin{align*}
+	\tau^- &\rightarrow \mu^- + \bar{\nu}_\mu + \nu_\tau \\
+	\tau^- &\rightarrow \el + \bar{\nu}_e + \nu_\tau \\
+	\tau^- &\rightarrow \bar{u} + d + \nu_\tau
+\end{align*}
+mit den angenommenen Zerfallsbreiten $\Gamma_{\tau e} \approx\Gamma_{\tau \mu}$ und $\Gamma_{\tau d\bar{u}}\approx 3\cdot\Gamma_{\tau e}$ (Faktor 3 kommt aus der Farbentartung).
+Man erwartet also für die Lebensdauer
+\begin{equation*}
+	\tau_\tau = \frac{\hbar}{\Gamma_{\tau e} + \Gamma_{\tau \mu} + \Gamma_{\tau d\bar{u}}} \approx \SI{3.1e-13}{\second},
+\end{equation*}
+was in guter Übereinstimmung mit dem experimentellen Wert von
+\begin{equation*}
+	\tau_\tau^\text{exp} = \SI{2.906(10)e-13}{\second}
+\end{equation*}
+ist.
+
+Dies ist kein besonders stichhaltiger Beweis für die Universalität der schwachen Wechselwirkung, da die Lebensdauer sehr stark von der Masse des $\tau$ abhängig ist,
+allerdings wird die Annahme aus semileptonischen Zerfällen der Hadronen weiter gestützt.
+
+\section{Der Cabbibo-Winkel}
+\begin{figure}
+	%\includegraphics{/path/to/figure} TODO
+	\caption{Feynmangraphen für die Bestimmung des Cabbibo-Winkels}
+	\label{fig:cabbibo}
+\end{figure}
+
+Wie bereits bekannt werden die Quarks in Familien nach Masse und Ladung unterteilt:
+\begin{equation*}
+	\twovec{u}{d}\quad\twovec{c}{s}\quad\twovec{t}{b}.
+\end{equation*}
+Man beobachtet nun aber neben Übergängen innerhalb einer Familie auch Übergänge zwischen den Familien in einem geringen Maße.
+Bezüglich der geladenen Ströme der schwachen Wechselwirkung ist daher der Partner des Flavoreigenzustandes $\ket{u}$ nicht $\ket{d}$, sondern eine Linearkombination von $\ket{d}$ und $\ket{s}$, welche $\ket{d'}$ genannt werden soll.
+Entsprechende Überlegungen lassen sich für die übrigen Flavoreigenzustände machen.
+Man kann diese Linearkombinationen nun durch den \textbf{Cabbibo-Winkel} wie folgt ausdrücken:
+\begin{equation*}
+	\ket{d'} = \cos\theta_\text{C}\ket{d} + \sin\theta_\text{C}\ket{s}.
+\end{equation*}
+Experimentell wird dieser Cabbibo-Winkel durch die hadronischen Zerfälle und deren Verzweigungsverhältnisse bestimmt (vgl. \autoref{fig:cabbibo}).
