@@ -50,11 +50,11 @@ die die elektromagnetische und schwache Wechselwirkung als zwei Aspekte einer ge
 \subsection{Schwacher Isospin}
 \begin{figure}
 	\centering
-	%\includegraphics[width=.7\textwidth]{./img/weakisospintable.pdf} TODO
+	\includegraphics[width=.7\textwidth]{./img/weakisospintable.pdf}
 	\caption{Multipletts der elektroschwachen Wechselwirkung}
 	\label{fig:weakisospin}
 \end{figure}
-Die elektroschwache WW lässt sich elegant formulieren, indem man eine neue Quatenzahl, den \textit{schwachen Isospin} $T$ einführt.
+Die elektroschwache WW lässt sich elegant formulieren, indem man eine neue Quantenzahl, den \textit{schwachen Isospin} $T$ einführt.
 Linkshändige Fermionen werden dabei als Dupletts angeordnet, die sich durch Emission/Absorption von W-Bosonen ineinander umwandeln können.
 Rechtshändige Fermionen werden in Singuletts angeordnet, da die W-Bosonen an sie nicht koppeln.
 Tabelle \ref{fig:weakisospin} fasst diesen Zusammenhang zusammen.
@@ -66,3 +66,29 @@ Dieses Problem wird dadurch gelöst, dass man einen weiteren Zustand $B^0$ postu
 Die Kopplungsstärke dieses Zustandes muss nicht mit der des Tripletts übereinstimmen, man nenne die Stärke $g'$.
 
 \subsection{Der Weinbergwinkel}
+Experimentell kennen wir in der Tat zwei neutrale Vektorbosonen: das Photon und das $Z^0$.
+Die Idee der elektroschwachen Theorie: wir drücken das Photon und $Z^0$ als zueinander orthogonale Linearkombinationen von $B^0$ und $W^0$ aus,
+ganz analog zur Quarkmischung mit dem Cabbibo-Winkel gilt dann
+\begin{alignat*}{3}
+	\ket{\gamma} &= \cos\theta_\text{W}\ket{B^0} &&+ \sin\theta_\text{W}\ket{W^0} \\
+	\ket{Z^0} &= -\sin\theta_\text{W}\ket{B^0} &&+ \cos\theta_\text{W}\ket{W^0}.
+\end{alignat*}
+Aus der Forderung, dass das Photon an die Ladung der links- und rechtshändigen Fermionen koppelt, nicht aber in die Neutrinos erhält man den Zusammenhang zwischen den schwachen Ladungen $g$ und $g'$
+\begin{gather*}
+	\tan\theta_\text{W} = \frac{g'}{g}\quad\sin\theta_\text{W}=\frac{g'}{\sqrt{g'^2 + g^2}}\quad\cos\theta_\text{W}=\frac{g}{\sqrt{g'^2 + g^2}}.
+\end{gather*}
+Für die elektrische Ladung dann analog
+\begin{equation*}
+	q_e = g\cdot\sin\theta_\text{W}.
+\end{equation*}
+
+Durch Messungen des Weinbergwinkels erhält man, dass die schwache Kopplungskonstante ($\alpha_\text{s}\propto g\cdot g$) demnach etwa viermal stärker als die elektromagnetische ($\alpha\propto e\cdot e$) ist.
+Der Grund für die geringe effektive Stärke der schwachen Wechselwirkung (bei kleinen Energien) liegt im Propagatorterm $p$ in den Feynmanamplituden der Reaktionen.
+Bei diesem geht die Masse der Austauschteilchen im Nenner ein, weswegen für ein masseloses Photon dieser Beitrag im Nenner nicht vorhanden ist:
+\begin{equation*}
+	\mathcal{M}\propto p\propto \frac{1}{q^2 - m^2_\text{boson}} =
+	\begin{cases}
+		\frac{1}{q^2},\ \text{EM} \\
+		\frac{1}{q^2 - m^2}<\frac{1}{q^2},\ \text{weak}
+	\end{cases}
+\end{equation*}
