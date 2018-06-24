@@ -66,6 +66,12 @@ Dieses Problem wird dadurch gelöst, dass man einen weiteren Zustand $B^0$ postu
 Die Kopplungsstärke dieses Zustandes muss nicht mit der des Tripletts übereinstimmen, man nenne die Stärke $g'$.
 
 \subsection{Der Weinbergwinkel}
+\begin{figure}
+	\centering
+	\includegraphics[width=.7\textwidth]{./img/diffsigmaelectroweak.pdf}
+	\caption{Differenzieller Wirkungsquerschnitt $\diff[\sigma]{Q^2}$ für Reaktionen mit neutralen und geladenen Strömen in der tiefinelastischen $e^\pm p$-Streuung}
+	\label{fig:diffsigmaelectroweak}
+\end{figure}
 Experimentell kennen wir in der Tat zwei neutrale Vektorbosonen: das Photon und das $Z^0$.
 Die Idee der elektroschwachen Theorie: wir drücken das Photon und $Z^0$ als zueinander orthogonale Linearkombinationen von $B^0$ und $W^0$ aus,
 ganz analog zur Quarkmischung mit dem Cabbibo-Winkel gilt dann
@@ -86,9 +92,47 @@ Durch Messungen des Weinbergwinkels erhält man, dass die schwache Kopplungskons
 Der Grund für die geringe effektive Stärke der schwachen Wechselwirkung (bei kleinen Energien) liegt im Propagatorterm $p$ in den Feynmanamplituden der Reaktionen.
 Bei diesem geht die Masse der Austauschteilchen im Nenner ein, weswegen für ein masseloses Photon dieser Beitrag im Nenner nicht vorhanden ist:
 \begin{equation*}
-	\mathcal{M}\propto p\propto \frac{1}{q^2 - m^2_\text{boson}} =
+	\mathcal{M}\propto p\propto \frac{1}{Q^2 + m^2_\text{boson}} =
 	\begin{cases}
-		\frac{1}{q^2},\ \text{EM} \\
-		\frac{1}{q^2 - m^2}<\frac{1}{q^2},\ \text{weak}
+		\frac{1}{Q^2},\ \text{EM} \\
+		\frac{1}{Q^2 + m^2}<\frac{1}{q^2},\ \text{weak}
 	\end{cases}
 \end{equation*}
+
+Im Limes hoher Energien $Q^2\rightarrow\infty$ wird der Beitrag der Bosonenmassen im Propagator aber vernachlässigbar klein.
+Deswegen sind die Unterschiede für Wirkungsquerschnitte bei geladenen und neutralen Strömen bei großen Energien verschwindend gering, wie Messungen in \autoref{fig:diffsigmaelectroweak} bestätigen.
+Die schwache und elektromagnetische Wechselwirkung vereinen sich.
+
+\subsection{Zahl der Neutrinosorten}
+Das detaillierte Studium der Erzeugung von $Z^0$-Bosonen durch $\el\pos$-Paarvernichtung ermöglicht eine sehr genaue Überprüfung der Vorhersagen der elektroschwachen Vereinheitlichung.
+Es müssen für die totale Zerfallsbreite bei diesem Prozess alle partialen Breiten summiert werden.
+Die Partialbreite für $\nu\bar{\nu}$-Paare beträgt unter Beachtung der verschiedenen Chiralitätszustände (rechtshändige Neutrinos treten in der Natur nicht auf $\rightarrow \hat{g}_\text{R} = 0 = T_3$)
+\begin{equation*}
+	\Gamma_\nu \approx \SI{165.8}{\MeV}.
+\end{equation*}
+Die Quarkbeiträge ergeben unter Beachtung der Farbentartung
+\begin{equation*}
+	\Gamma_\text{d} = \Gamma_\text{s} = \Gamma_\text{b} = 3\cdot\SI{122.4}{\MeV}.
+\end{equation*}
+Entsprechend für die u- und c-Quarks
+\begin{equation*}
+	\Gamma_\text{u} = \Gamma_\text{c} = 3\cdot\SI{94.9}{\MeV}.
+\end{equation*}
+Dabei wird zwischen up-artigen und down-artigen Quarks unterschieden, da diese verschiedene schwache Isospins aufweisen und damit verschieden an das $Z^0$ koppeln.
+Der Beitrag der geladenen Leptonen ergibt
+\begin{equation*}
+	\Gamma_\text{e} = \Gamma_\mu = \Gamma_\tau = \SI{83.3}{\MeV}.
+\end{equation*}
+
+Somit beträgt die gesamte Zerfallsbreite (nach Strahlungskorrekturen)
+\begin{equation*}
+	\Gamma_\text{tot} = \SI{2497(6)}{\MeV},
+\end{equation*}
+was sich ausgezeichnet mit dem experimentellen Wert
+\begin{equation*}
+	\Gamma_\text{tot,ex} = \SI{2495(2)}{\MeV}
+\end{equation*}
+deckt.
+
+Gäbe es noch eine weitere Neutrinosorte, so wäre die totale Zerfallsbreite um \SI{166}{\MeV} größer.
+Man kann also aus diesem Resultat schließen, dass es genau 3 Sorten leichter Neutrinos gibt.
