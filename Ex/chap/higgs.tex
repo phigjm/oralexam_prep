@@ -14,4 +14,45 @@ Bei ausreichend hohen Temperaturen bzw. Energien sind $Z^0$- und $W^\pm$-Bosonen
 Unterhalb der Energie des Phasenüberganges werden die Massen der Bosonen dann durch die Kopplung an die Higgs-Felder erzeugt.
 In der Theorie der elektroschwachen Vereinheitlichung gibt es 4 Higgs-Felder.
 Bei kleinen Energien werden 3 Higgs-Bosonen, die Quanten des Higgs-Feldes von den elektroschwachen Bosonen absorbiert und erhalten somit ihre Masse.
-Das Photon bleibt weiterhin masselos, daher muss es ein freies, massives Higgs-Boson geben. 
+Das Photon bleibt weiterhin masselos, daher muss es ein freies, massives Higgs-Boson geben.
+
+\section{Spontane Symmetriebrechung}
+Alle bekannten Teilchen erfüllen eine lokale Eichsymmetrie, entweder als $SU(2)_L$-Dublett oder -Singulett.
+Wir postulieren für eine spontane Symmetriebrechung nun also das neue Feld $\phi$, welches ein $SU(2)_L$-Dublett ist und eine Selbstwechselwirkung besitzt, die zu einem Potenzial mit spontaner Symmetriebrechung führt.
+Ein einfacher Kandidat für ein solches Feld ist
+\begin{equation*}
+	\phi = \frac{1}{\sqrt{2}}(\phi_1+i\phi_2).
+\end{equation*}
+Mit dem \textit{Goldstone-Potenzial}
+\begin{equation*}
+	V(\phi) = -\mu^2|\phi|^2 + \lambda|\phi|^4
+\end{equation*}
+lautet dann die Lagrangedichte für das Higgs-Feld
+\begin{equation*}
+	\mathcal{L}_\text{Higgs} = \partial_\mu\phi\partial^\mu\phi^* - V(\phi) = \partial_\mu\phi\partial^\mu\phi^* + \mu^2|\phi|^2 - \lambda|\phi|^4,
+\end{equation*}
+dabei sind $\mu^2$ und $\lambda$ positive, reelle Parameter.
+
+Die ersten beiden Terme in $\mathcal{L}_\text{Higgs}$ sind nahezu identisch zur freien Klein-Gordon-Gleichung, jedoch ist das Vorzeichen vor $\mu\phi^\dagger\phi$ ''falsch''.
+Die Idee des Higgs-Mechanismus ist also, dem Higgs-Feld im Gegensatz zu einem normalen Skalarboson eine imaginäre Masse zu verleihen.
+
+Durch diese imaginäre Masse hat das Goldstone-Potenzial die Form, die in \autoref{fig:goldstone_pot} zu sehen ist. %TODO
+Der Boden dieses Sektflaschen-Potenzials ist dabei der Grundzustand, welcher bezüglich des Polarwinkels $\varphi$ entartet ist, somit $U(1)$-Symmetrie aufweist.
+Fällt das Teilchen nun von dem metastabilen Zustand ($|\phi|=0$) in den Grundzustand, wird eine Richtung ausgezeichnet, daher bricht es die $U(1)$.
+Ganz gleich, ob man sich in einer abelschen oder nicht-abelschen Theorie befindet, der Grundzustand des Potenzials liegt immer bei
+\begin{equation*}
+	<\phi> = \sqrt{\frac{\mu^2}{2\lambda}}.
+\end{equation*}
+Dieser Wert ist im Wesentlichen der Vakuumerwartungswert und lässt sich durch die Messung von anderen Größen im SM bestimmen.
+
+Mit dem Vakuumerwartungswert $v$ und zwei reellen Parametern $h$ und $\chi$, lässt sich das Feld nun auch in Polarform parametrisieren
+\begin{equation*}
+	\phi = \frac{v+h}{\sqrt{2}}e^{i\nicefrac{\chi}{v}}.
+\end{equation*}
+Ersetzt man nun das Higgs-Feld in der ursprünglichen Lagrangedichte, so lautet diese
+\begin{equation*}
+	\mathcal{L}_\text{Higgs}' = \frac{1}{2}\partial_\nu h\partial^\nu h + \frac{1}{2}\partial_\nu\chi\partial^\nu\chi - \mu^2h^2 + \text{Interactions}.
+\end{equation*}
+Vergleicht man dies nun mit der Klein-Gordon-Gleichung, so hat das $h$-Feld die Masse $m_h=\sqrt{2}\mu$ und das $\chi$-Feld ist masselos, das $\chi$-Teilchen ist daher das Goldstone-Boson in dieser spontanen Symmetriebrechung.
+
+Anschaulich beschreibt das $\chi$-Feld die polare Komponente, bei der eine ''Murmel'' im Potenzial ohne Energie aufzuwenden auf dem Boden der Sektflasche rollen kann, während das $h$-Feld die radiale Komponente beschreibt, bei der Energie aufgewendet werden muss, um die ''Murmel'' die Flaschenwand hinauf zu transportieren.
