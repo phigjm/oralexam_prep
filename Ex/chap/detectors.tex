@@ -33,9 +33,42 @@ Da hadronische Teilchen szintillierendes Material fast ungehindert durchdringen 
 \textbf{Im Myon-System} werden die hochenergetischen Myonen nachgewiesen, da sie für einen Nachweis im em-Kalorimeter zu hochenergetisch sind.
 
 \section{Spurdetektoren}
+\subsection{Gasgefüllte Spurdetektoren}
+Hereinkommende geladene Teilchen ionisieren das Gas im Detektor und hinterlassen dabei eine Spur.
+Ionisierte Ladungen bewegen sich entlang eines elektrischen Feldes zur Kathode bzw. Anode.
+Je nach dem, in welchem Bereich der Kennlinie man sich bewegt unterscheidet man zwischen
+\begin{itemize}
+	\item \textbf{Proportionalkammern}, die im linearen Bereich der Kennlinie betrieben werden. Dabei ist die Anzahl der Ionenpaare proportional zur Primärionisation.
+	\item \textbf{Geiger-Müller-Zählrohren}, die in der Plateauregion betrieben werden und damit keine Proportionalität zur Primärionisation aufweisen.
+\end{itemize}
+\subsubsection{Vieldrahtproportionalkammern}
+bestehen aus vielen parallel angeordneten Anodendrähten. Es lässt sich somit eine 1D-Ortsinformation bestimmen und da sie im Proportionalbetrieb sind, auch die Teilchenenergie in einem bestimmten Bereich.
+
+\subsubsection{Driftkammern}
+lösen das Problem der limitierten Ortsauflösung durch den Drahtabstand bei MWPCs. Die Ionen brauchen eine bestimmte Zeit, um zum Anodendraht zu wandern. Diese Zeit $\Delta t$ kann dazu verwenden werden, um eine Ortsinformation zu erhalten nach
+\begin{equation*}
+	x' = x_0 + \frac{e}{2m}\mvec{E}(\mvec{r})\Delta t.
+\end{equation*}
+In Zeitprojektionskammern kann man so sogar eine 3D-Ortsbestimmung machen: 2D über die Projektion auf die Anoden, 1D über die Driftzeitinformation.
+
+\subsection{Siliziumdetektoren}
+Eleganter, aber kostenaufwändiger lässt sich das mit Siliziumdetektoren in Sperrrichtung lösen, wie am CMS der Fall.
+Dabei beträgt die Impulsauflösung ca. 0.5\%.
+Die Impulsbestimmung folgt aus dem assoziierten Zyklotronradius der Teilchenspur über
+\begin{equation*}
+	p[\si{\GeV}] = 0.3\cdot r[\si{\meter}] \cdot B[\si{\tesla}].
+\end{equation*}
 
 \section{Kalorimeter}
-
+Das Kalorimeter schließt sich an die Spurdetektoren an und misst die Energie aller erzeugten und nachweisbaren Teilchen.
+Dabei werden verschiedene Phänomene ausgenutzt
+\begin{itemize}
+	\item Energieverlust durch Ionisation
+	\item Sammlung von Szintillationslicht
+	\item Elektromagnetische und hadronische Schauerbildung.
+\end{itemize}
+Das Kalorimeter muss dabei dick genug sein, um die Teilchenschauer vollständig im aktiven Material zu stoppen, andernfalls gehen Informationen verloren.
+Das Szintillationslicht wird dann durch Photomultiplier ausgelesen.
 \subsection{Elektromagnetische Schauer}
 
 \subsection{Hadronische Schauer}
