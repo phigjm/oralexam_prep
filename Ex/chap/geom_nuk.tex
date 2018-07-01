@@ -3,10 +3,10 @@
 \section{Mandelstam-Variablen}
 Betrachten die Reaktion zweier Teilchen mit den 4-Impulsen $p_1$ und $p_2$. Die auslaufenden Teilchen sollen die 4-Impulse $p_3$ und $p_4$ haben.
 Dann kann man die sogen. \textbf{Mandelstam-Variablen}
-\begin{alignat*}{3}
-	s &= \left(p_1 + p_2 \right)^2 &&= \left(p_3 + p_4 \right)^2 \\
-	t &= \left(p_1 - p_3 \right)^2 &&= \left(p_4 - p_2 \right)^2 \\
-	u &= \left(p_1 - p_4 \right)^2 &&= \left(p_3 - p_2 \right)^2.
+\begin{alignat*}{5}
+	s &= \left(p_1 + p_2 \right)^2 &&= \left(p_3 + p_4 \right)^2 &&\stackrel{\text{LS}}{=} 2m_2E_1 &&\stackrel{CMS}{=}4E^2\\
+	t &= \left(p_1 - p_3 \right)^2 &&= \left(p_4 - p_2 \right)^2 &&\stackrel{\text{LS}}{=} 2m_2(E_3-E_1) &&\stackrel{CMS}{=} \frac{s}{2}(\cos\theta-1)\\
+	u &= \left(p_1 - p_4 \right)^2 &&= \left(p_3 - p_2 \right)^2 &&\stackrel{\text{LS}}{=} -2m_2E_3 &&\stackrel{CMS}{=}-\frac{s}{2}(\cos\theta+1).
 \end{alignat*}
 $s$ ist dabei das Quadrat der Schwerpunktsenergie des Systems und $u$ entspricht dem Quadrat des 4-Impulsübertrags einer gewöhnlichen Streuung.
 Die Mandelstam-Variablen sind Lorentzskalare.
@@ -18,7 +18,7 @@ Sie ist definiert als
 	y = \frac{1}{2}\log\left(\frac{E+cp}{E-cp}\right)\quad \text{bzw. als}\quad y_L=\frac{1}{2}\log\left(\frac{E+cp_\text{z}}{E-cp_\text{z}}\right)
 \end{equation*}
 in der Teilchenphysik.
-Anders als die Geschwindigkeit $v$ eines Teilchens ist die Rapidität nicht auf das Intervalll $[-c,\ +c]$ beschränkt, sondern ist unbeschränkt.
+Anders als die Geschwindigkeit $v$ eines Teilchens ist die Rapidität nicht auf das Intervall $[-c,\ +c]$ beschränkt, sondern ist unbeschränkt.
 Sie gibt ein intuitiveres Gefühl dafür, welche Geschwindigkeit ein Teilchen hätte, würde es keine relativistischen Effekte erfahren.
 Außerdem sind Differenzen von zwei Rapiditäten invariant unter Lorentzboosts entlang der Strahlachse und man kann Rapiditäten einfach addieren, anders als Geschwindigkeiten ($\rightarrow$ rel. Geschwindigkeitsaddition).
 Aufgrund dieser Invarianz unter Lorentzboosts wird die Angabe von $y$ gegenüber dem Polarwinkel $\theta$ bevorzugt.
@@ -40,13 +40,16 @@ Experimentell gilt
 \begin{equation*}
 	\sigma = \frac{N_\text{obs}-N_\text{bg}}{\mathcal{L}\cdot\varepsilon\cdot A}\cdot\frac{1}{T},
 \end{equation*}
-mit der weiteren wichtigen Detektorkenngröße, der \textbf{Luminosität} $\mathcal{L}$.
+mit der weiteren wichtigen Detektorkenngröße, der \textbf{Luminosität} $\mathcal{L}$, die die Anzahl der Teilchenbegegnungen pro Zeit und Fläche beschreibt.
+Für Effizienz $\varepsilon$ und Akzeptanz $A$, siehe \url{https://www.spektrum.de/lexikon/physik/nachweisempfindlichkeit/10087}.
 
 \subsection{Rutherford-Wirkungsquerschnitt}
 Der Rutherfordsche Wirkungsquerschnitt gibt den theoretischen Wirkungsquerschnitt unter Vernachlässigung von Spins und Targetrückstoß an
 \begin{equation}\label{eq:ruth_sigma}
 	\left(\diff[\sigma]{\Omega}\right)_\text{Ruth} = \left(\frac{zZe^2}{4\pi\epsilon_0\cdot 4E_\text{kin}}\right)^2\cdot\frac{1}{\sin^4\frac{\theta}{2}}.
 \end{equation}
+Problematisch erscheint hierbei zunächst, dass der Wirkungsquerschnitt für $\theta\rightarrow 0$ divergiert.
+Allerdings gehören kleine Streuwinkel zu großen Stoßparametern weit entfernt vom Kern, wo die Elektronen bereits das Coulombfeld des Kernes abschirmen und somit die Formel für den Wirkungsquerschnitt nicht mehr anwendbar ist.
 
 Definiert man den Impulsübertrag
 \begin{equation*}
@@ -143,7 +146,7 @@ Dann trägt man das Resultat gegen $\tan^2\frac{\theta}{2}$ auf, damit liegen di
 	\label{fig:inelastic}
 \end{figure}
 Nimmt man bei festem Streuwinkel $\theta$ ein Spektrum der gestreuten Elektronen auf, so registriert man Ereignisse nicht nur bei Energieüberträgen, die dem Rückstoß entsprechen,
-sondern auf bei größeren.
+sondern auch bei größeren.
 Diese Ereignisse sind auf inelastische Reaktionen zurückzuführen.
 \autoref{fig:inelastic} zeigt ein solches Spektrum.
 Der Peak bei $E'\approx\SI{482}{\MeV}$ ist die elastische Streuung am C-Kern.
