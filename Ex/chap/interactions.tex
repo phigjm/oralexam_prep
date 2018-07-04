@@ -18,10 +18,13 @@ Dazu gehören die Prozesse
 \autoref{fig:electroninteractions} zeigt den Energieverlust für verschiedene Energien und Prozesse.
 Bremsstrahlung ist für hohe Energien dominant, Streuung und Ionisation für niedrige Energien.
 Die \textbf{kritische Energie} ist dabei der Punkt, ab dem die Verluste durch Ionisation und Strahlung gleich sind.
+Das bedeutet, dass die Kaskadenbildung für Energien unterhalb der kritischen Energie nicht mehr dominant über der Ionisation ist.
+
 Die Strahlungslänge $X_0$ ist definiert über
 \begin{equation*}
 	-\diff[E]{X} = \frac{E}{X_0}.
 \end{equation*}
+Nach einer Strahlungslänge ist die Teilchenenergie auf einen Anteil $\nicefrac{1}{e}$ abgefallen.
 
 \subsection{Energieverlust durch Ionisation}
 Die wichtigste Wechselwirkung geladener Teilchen ist die Ionisation des aktiven Mediums.
@@ -99,3 +102,30 @@ Der Wirkungsquerschnitt für diesen Prozess ist
 dabei ist $\delta$ von der Photonenenergie abhängig und nimmt verschiedene Werte an.
 Auffällig ist die starke Abhängigkeit von der Kernladungszahl des Atoms, was Sinn ergibt, weil für große Kernladungszahlen die Coulomb-Abstoßung im Kern groß wird und daher nach der Bethe-Weizäcker-Formel (Coulombterm) das Atom weniger Bindungsenergie aufweist.
 Daher ist für große Kernladungszahlen der Wirkungsquerschnitt auch entsprechend hoch.
+
+Der Photoeffekt ist für kleine Energien dominant.
+
+\subsection{Die Compton-Streuung}
+Der Compton-Effekt beschreibt die Änderung der Wellenlänge eines auf ein Teilchen (meistens $\el$) einfallendes Photon.
+Dabei beträgt die Wellenlängenänderung
+\begin{equation*}
+	\Delta\lambda = \underbrace{\frac{h}{m_ec}}_{\lambda_\text{c}}(1-\cos\theta).
+\end{equation*}
+Das gestreute Photon hat dann die Energie
+\begin{equation*}
+	E'_\gamma = \frac{E_\gamma}{1 + \frac{E_\gamma}{m_ec^2}(1-\cos\theta)}.
+\end{equation*}
+
+Der Compton-Effekt ist für Energien zwischen \SI{100}{\keV} und \SI{10}{\MeV} dominant.
+
+\subsection{Paarbildung}
+Die Paarbildung ist die Bildung eines realen Teilchen-Antiteilchen-Paares aus einem Photon, das mit Materie wechselwirkt.
+Dabei kann es entweder mit den Atomkernen oder mit einem Elektron aus deren Atomhüllen wechselwirken.
+Das einfallende Photon muss dabei mindestens die Ruheenergien der beiden Teilchen aufbringen.
+
+Dass die Bildung eines Elektron-Positron-Paares nur bei Wechselwirkung des Photons mit einem Teilchen, aber nicht im Vakuum beobachtet wird, lässt sich mit der allgemeingültigen Impulserhaltung erklären.
+Im Grenzfall einer Photonenenergie die genau den Ruhemassen des Teilchenpaares entspricht ist der Gesamtimpuls im Ruhesystem der beiden Teilchen 0.
+Allerdings hat das Photon in allen Bezugssystemen einen nichtverschwindenden Impuls von $\nicefrac{E_\gamma}{c}$.
+Daher kann das Teilchen-Antiteilchen-Paar mit dem Gesamtimpuls 0 nicht die einzigen, an der Reaktion beteiligten Teilchen sein.
+
+Die Paarbildung ist aufgrund des immensen Energiebedarfs (Ruhemassen des Paares) dominant für hohe Energien.
