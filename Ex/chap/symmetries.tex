@@ -1,6 +1,6 @@
 \chapter{Diskrete Symmetrien und Erhaltungssätze}
 \section{Diskrete Symmetrien}
-\begin{figure}
+\begin{figure}[h!]
 	\centering
 	\includegraphics[width=.7\textwidth]{./img/symmetries.jpg}
 	\caption{Zusammenfassung der Erhaltungsgrößen}
@@ -8,7 +8,7 @@
 \end{figure}
 
 \section{Parität}
-\subsection{Der P-Operator}
+\subsection{Der $\mathcal{P}$-Operator}
 Der Paritätsoperator $P$ erzeugt eine räumliche Spiegelung im Ursprung.
 Sie ist eine mulitplikative Quantenzahl mit den möglichen Eigenwerten $\pm 1$.
 Eine Reaktion $a+b\longrightarrow c+d$ hätte die Gesamtparität
@@ -113,12 +113,66 @@ Tatsächlich misst man nur in eine Magnetisierungsrichtung Ereignisse.
 Somit ist bestätigt, dass Neutrinos nur linkshändig vorkommen.
 
 \section{Ladungskonjugation}
-\subsection{Der C-Operator}
+\subsection{Der $\mathcal{C}$-Operator}
 Der C-Operator führt in einem System Teilchen in Antiteilchen und vice versa über.
+
 \subsection{CP-Erhaltung}
-%TODO
-TODO
 Man kann leicht sehen, dass durch die festgelegte Helizität der Neutrinos die schwache Wechselwirkung C-Symmetrie von vornherein bricht (C auf linkshändiges Neutrino $\rightarrow$ linkshändiges Antineutrino, gibt's aber im SM nicht!).
 Wendet man jedoch CP gemeinsam auf Prozesse an, an denen die schwache Wechselwirkung beteiligt ist, so entstehen Prozesse, die in der Natur existieren.
 Die schwache Wechselwirkung ist somit CP-erhaltend.
-Es gibt jedoch Fälle, bei denen die CP-Symmetrie nicht erhalten bleibt.
+Es gibt jedoch Fälle, bei denen die CP-Symmetrie nicht erhalten bleibt, wie zum Beispiel beim neutralen Kaonzerfall.
+
+\subsubsection{Der Zerfall des neutralen Kaons}
+\begin{figure}
+	\centering
+	\includegraphics[width=.5\textwidth]{./img/boxkaon.pdf}
+	\caption{Boxdiagramm zur Veranschaulichung der Kaonen-Übergänge}
+	\label{fig:box}
+\end{figure}
+Neutrale Kaonen $K^0$ können sowohl in zwei als auch in drei Pionen zerfallen.
+Dabei hat das Zwei-Pion-System eine Parität von $+1$ und das Drei-Pion-System eine von $+1$.
+Dies kann man sich ganz einfach daraus überlegen, dass das $K^0$ einen Gesamtdrehimpuls von 0 aufweist und die Eigenparität der Pionen $-1$ ist
+\begin{equation*}
+	\mathcal{P}\ket{\pi\pi} = (-1)^2\cdot (-1)^{l=0} = +\ket{\pi\pi}\qquad \mathcal{P}\ket{\pi\pi\pi} = (-1)^3\cdot (-1)^{l=0} = -\ket{\pi\pi\pi}.
+\end{equation*}
+Die Tatsache, dass beide Zerfälle beobachtet werden, obwohl das Kaon eine Parität von $-1$ hat, zeugt bereits von Paritätsverletzung.
+
+Da das $K^0$ und das $\bar{K^0}$ in die gleichen Endzustände zerfallen können, können sie über einen virtuellen, pionischen Zwischenzustand mischen
+\begin{equation*}
+	K^0 \longleftrightarrow \twovec{2\pi}{3\pi} \longleftrightarrow \bar{K^0},
+\end{equation*}
+was man mit einem Boxdiagramm (\autoref{fig:box}) besser veranschaulichen kann.
+
+Die beim Zerfall entstehenden Pion-Systeme sind Eigenzustände bezüglich des $\mathcal{CP}$-Operators
+\begin{equation*}
+	\mathcal{CP}\ket{\pi\pi} = +\ket{\pi\pi}\qquad\mathcal{CP}\ket{\pi\pi\pi} = -\ket{\pi\pi\pi}.
+\end{equation*}
+während die $K^0$ und $\bar{K^0}$ keine Eigenzustände sind
+\begin{equation*}
+	\mathcal{CP}\ket{K^0} = -\ket{\bar{K^0}}\qquad\mathcal{CP}\ket{\bar{K^0}} = -\ket{K^0}.
+\end{equation*}
+
+Wenn wir davon ausgehen, dass die schwache Wechselwirkung CP-erhaltend ist, so muss vor dem Zerfall ein Eigenzustand bezüglich des $\mathcal{CP}$-Operators vorgelegen haben.
+Diese Zustände lassen sich konstruieren
+\begin{align*}
+	\ket{K^0_1} &= \frac{1}{\sqrt{2}}\left(\ket{K^0}-\ket{\bar{K^0}}\right) \quad\text{mit}\ \mathcal{CP}\ket{K^0_1} = +\ket{K^0_1} \\
+	\ket{K^0_2} &= \frac{1}{\sqrt{2}}\left(\ket{K^0}+\ket{\bar{K^0}}\right) \quad\text{mit}\ \mathcal{CP}\ket{K^0_2} = -\ket{K^0_2}.
+\end{align*}
+Nach diesen Überlegungen sollte der $\ket{K^0_1}$-Zustand aufgrund von CP-Erhaltung also in zwei Pionen und der $\ket{K^0_2}$-Zustand in 3 Pionen zerfallen.
+Da der Phasenraum für 3-Körperzerfälle erheblich kleiner ist als für einen 2-Körperzerfall, sollte demnach das $\ket{K^0_2}$ auch deutlich langlebiger sein als das $\ket{K^0_1}$.
+In der Tat beobachtet man bei Reaktionen, in denen neutrale Kaonen entstehen, eine Mischung von kurz- und langlebigen Teilchen, die man als $K^0_\text{L}$ und $K^0_\text{S}$ bezeichnet.
+
+Dieses Mischungsverhältnis von anfangs 50:50 ändert sich mit der Zeit.
+Die Zeitentwicklung von $K^0$ und $\bar{K^0}$ zeigt ein typisches Oszillationsverhalten, wie man es für ein quantenmechanisches System aus zwei Basiszuständen kennt.
+Man nennt diese Oszillation \textbf{Strangeness-Oszillation}.
+
+Will man einen reinen $K^0_\text{L}$-Strahl haben, so baut man seinen Detektor in einiger Entfernung von der $K^0$-Quelle auf, sodass die $K^0_\text{S}$ bis dahin bereits zerfallen sind und nur noch die $K^0_\text{L}$ übrig sind.
+Daraus kann man aber auch wieder einen gemischten Strahl herstellen, indem man einfach ein Stück Materie in den Strahlgang bringt.
+Da der $K^0_\text{L}$-Strahl zu 50:50 $K^0$ und $\bar{K^0}$ enthält, werden die Antiteilchen stärker im Material absorbiert und man erhält überwiegend einen Strahl aus $K^0$, welcher ja wieder $K^0_\text{S}$ enthält.
+
+Betrachten wir nun ein Experiment, in dem genau dieser Versuchsaufbau vorliegt.
+Ein Detektor wurde so weit von der Quelle platziert, sodass wir einen reinen $K^0_\text{L}$-Strahl haben.
+Wenn CP-Erhaltung gilt, dürften wir also nur 3-Pionzerfälle beobachten.
+Dieses Experiment wurde im Jahr 1964 durchgeführt und es wurde erstmals nachgewiesen, dass das $K^0_\text{L}$ auch mit einer geringen Wahrscheinlichkeit in 2 Pionen zerfällt, was der erste Nachweis für eine CP-Verletzung war.
+
+Man führt dies darauf zurück, dass der Masseneigenzustand $K^0_\text{L}$ nicht identisch mit dem CP-Eigenzustand $K^0_1$ ist, sondern wiederum eine Mischung aus $K^0_1$ und $K^0_2$ mit einem komplexen Mischungsparameter $\epsilon$, welcher die beiden Zustände gewichtet.
