@@ -1,0 +1,39 @@
+\chapter{Eichtransformationen}
+\section{Lagrangedichte}
+Im Rahmen einer klassischen Feldtheorie kann die Dynamik eines Systemes mit der Lagrangedichte $\mathcal{L}$ beschrieben werden.
+Aus ihr können durch die Euler-Lagrange-Gleichung Bewegungsgleichungen des Systemes hergeleitet werden.
+Für ein Klein-Gordon-Feld gilt
+\begin{equation*}
+	\mathcal{L} = \partial_\mu\phi\partial^\mu\phi^* - m^2\phi\phi^*
+\end{equation*}
+und für ein Dirac-Feld
+\begin{equation*}
+	\mathcal{L} = \bar{\psi}(i\gamma^\mu\partial_\mu - m)\psi.
+\end{equation*}
+Wendet man auf diese Lagrangedichten Euler-Lagrange-Gleichungen
+\begin{equation*}
+	\partial^\mu\frac{\partial\mathcal{L}}{\partial(\partial^\mu\phi_i)}-\frac{\partial\mathcal{L}}{\partial\phi_i}
+\end{equation*}
+an, so erhält man bei Bosonen die Klein-Gordon-Gleichung und bei Fermionen die Dirac-Gleichung.
+
+\section{Globale und lokale Phasentransformationen}
+Die Lagrangedichten sollten so konstruiert sein, dass sie kovariant unter globalen und lokalen Phasentransformationen sind.
+Eine solche Transformation lautet für globale Phasen
+\begin{alignat*}{3}
+	\psi(x,t) &\rightarrow \psi'(x,t) &&= e^{i\theta}\psi(x,t) \\
+	\bar{\psi}(x,t) &\rightarrow\bar{\psi}'(x,t) &&= \bar{\psi}(x,t)e^{-i\theta}.
+\end{alignat*}
+Für lokale Phasen $\theta=\theta(x,t)$ muss in der Lagrangedichte die Ableitung $\partial_\mu$ durch eine kovariante Ableitung
+\begin{equation*}
+D_\mu\rightarrow D'_\mu = D_\mu - i\partial_\mu\theta	\quad\text{mit}\ D_\mu=\partial_\mu + ieA_\mu
+\end{equation*}
+ersetzt werden, damit die betroffene Lagrangedichte kovariant bleibt.
+Das Transformationsverhalten des Eichfeldes muss dann $A_\mu\rightarrow A'_\mu=A_\mu-\frac{1}{e}\partial_\mu\theta$ lauten, was bereits aus der Elektrodynamik bekannt ist.
+
+Man kann also für das Feld $\psi(x,t)$ eine beliebige Phase $\theta(x,t)$ erlauben, solange man ein vermittelndes Feld $A_\mu$ einführt, das diese Information von $(x,t)$ zu $(x',t')$ transportiert.
+Das Eichfeld $A_\mu$ koppelt dabei an die Größe $e$ des Feldes $\psi(x,t)$.
+
+Die Einführung dieses Eichfeldes führt bei einem Fermion zum Beispiel zu einem weiteren Wechselwirkungssektor
+\begin{equation*}
+	\mathcal{L}_\text{IA} = \underbrace{\bar{\psi}(i\gamma^\mu\partial_\mu - m)\psi}_\text{frei} - \underbrace{e\bar{\psi}\gamma^\mu\ \textcolor{red}{A_\mu}\ \psi}_\text{IA}.
+\end{equation*}

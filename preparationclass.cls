@@ -46,3 +46,4 @@
 \usepackage[raiselinks=true]{hyperref}
 \usepackage{parskip}
 \usepackage{subcaption}
+\usepackage{color}
