@@ -1,0 +1,45 @@
+\chapter{Kerne}
+
+\section{Kernmodelle}
+Die Masse eines Kernes ist
+\begin{equation*}
+	m_\text{Kern} = Z\cdot m_\text{p} + N\cdot m_\text{n} - E_\text{B}
+\end{equation*}
+mit $Z$, der Kernladungszahl, $N$, der Neutronenzahl und $E_\text{B}$, der Bindungsenergie.
+
+Es gibt verschiedene Modelle, diese Bindungsenergie zu beschreiben.
+
+\subsection{Tröpfchenmodell}
+Das Tröpfchenmodell beschreibt einen Atomkern wie einen Flüssigkeitstropfen.
+Die darauf beruhende \textbf{Bethe-Weizsäcker-Massenformel} lautet
+\begin{equation*}
+	E_\text{B} = \underbrace{a_\text{V}A}_{E_\text{V}} - \underbrace{a_\text{S}A^\nicefrac{2}{3}}_{E_\text{S}} - \underbrace{a_\text{C}\frac{Z(Z-1)}{A^\nicefrac{1}{3}}}_{E_\text{C}} - \underbrace{a_\text{A}\frac{(A-2Z)^2}{A}}_{E_\text{C}} + \delta (A,Z).
+\end{equation*}
+
+\subsubsection{Der Volumenterm $E_\text{V}$}
+Der Volumenterm $E_\text{V}$ ist proportional zum Volumen $V$ des Kerns, welcher proportional zu $A$ ist.
+Es liegt dabei die starke Wechselwirkung zugrunde, die bekanntlich gleichermaßen auf Protonen und Neutronen wirkt, daher überrascht es nicht, dass kein $Z$ im Term vorkommt.
+Die Zahl der möglichen Wechselwirkungspaare ist $\frac{A(A-1)}{2}$, also würde man naiv einen Term erwarten, der wie $A^2$ geht.
+Allerdings hat die starke Wechselwirkung nur eine sehr begrenzte Reichweite, sodass nur nächste und übernächste Nachbarn wechselwirken können, daher geht der Term etwa linear in $A$.
+
+\subsubsection{Der Oberflächenterm $E_\text{S}$}
+Der Oberflächenterm $E_\text{S}$ basiert ebenfalls auf der starken Wechselwirkung.
+Er ist eine Korrektur zum Volumenterm für Teilchen am Rand des Tropfens, der beachtet, dass Nukleonen an der Oberfläche des Tropfens weniger Wechselwirkungspartner zur Verfügung haben.
+Wenn also das Volumen des Tropfens $\propto A$ ist, dann ist die Oberfläche $\propto A^\nicefrac{2}{3}$, daher die Form.
+Das Analogon zum Tropfen ist hier die Oberflächenspannung.
+
+\subsubsection{Der Coulombterm $E_\text{C}$}
+Dem Coulombterm $E_\text{C}$ liegt die elektrostatische Abstoßung zwischen den Protonen zugrunde.
+Da die Abstoßung nur für mehr als ein Proton existieren kann, folgt die Form $Z(Z-1)$.
+Wenn man annimmt, dass der Tropfen eine gleichmäßige Ladungsverteilung hat, so geht das elektrische Feld mit $\frac{1}{R}\propto\frac{1}{A^\nicefrac{1}{3}}$.
+
+\subsubsection{Der Asymmetrieterm $E_\text{A}$}
+Beim Asymmetrieterm $E_\text{A}$ kommt das Pauli-Prinzip zum Tragen.
+Sowohl Protonen, als auch Neutronen können unter Beachtung des Pauli-Prinzips innerhalb ihrer eigenen Pools Energieniveaus bis zu ihrer Fermienergie auffüllen.
+Wenn nun von einer Sorte Nukleonen mehr Teilchen im Kern vorhanden sind, so hat dieser Pool eine höhere Fermienergie als der andere.
+Wir könnten durch einen schwachen Zerfall nun die Energie senken, daher ist die Energie höher, als sie sein müsste.
+Diese Überlegung bildet die Basis dieses Termes.
+
+Im Fermigasmodell für Kerne folgt dieser Term sogar explizit aus der Rechnung.
+
+\subsection{Das Fermigasmodell}
