@@ -1,0 +1,31 @@
+\chapter{Atome und Moleküle}
+
+\section{Die Plankverteilung}
+Im Rahmen der klassischen Physik kann man die spektrale Leistungsverteilung eines schwarzen Körpers relativ einfach zu
+\begin{equation*}
+	M(\lambda)\cdot\text{d}\lambda = \frac{2\pi\cdot c\cdot k_\text{B}T}{\lambda^4}\cdot\text{d}\lambda.
+\end{equation*}
+Richtig ist dieses Verhalten bei großen Wellenlängen.
+Jedoch strebt die Strahlungsleistung für kleine Wellenlängen gegen unendlich, was man als \textit{Ultraviolett-Katastrophe} bezeichnet.
+
+Planck löste dieses Problem durch die Annahme, dass sich Wellen in einem Hohlraum (schwarzer Körper) sich verhalten wie harmonische Oszillatoren, die nur diskrete Energiewerte $E=n\cdot\hbar\omega$ annehmen können und bei diesen Energien Strahlung absorbieren/emittieren.
+Einstein konnte die Planksche Strahlungsformel dann relativ einfach durch Mastergleichungen für das System (?) herleiten.
+Die Übergänge lauteten
+\begin{itemize}
+	\item \textbf{Induzierte Emission:} $\text{d}N_{21} = B_{21}u(\nu)N_2\text{d}t$
+	\item \textbf{Spontane Emission:} $\text{d}N_{21} = A_{21}N_2\text{d}t$.
+\end{itemize}
+Im thermischen Gleichgewicht folgt dann $\text{d}N_{21} = \text{d}N_{12}$ oder
+\begin{equation*}
+	\frac{N_2}{N_1} = \frac{B_{12}u(\nu)}{A_{21}+B_{21}u(\nu)} \stackrel{\text{Boltzm.}}{=} \frac{\exp(-E_1)}{\exp(-E_2)}.
+\end{equation*}
+Mit den Randbedingungen $T\rightarrow\infty : u(\nu)\rightarrow\infty$ und dass bei kleinen Frequenzen das Rayleigh-Jeans-Gesetz gelten muss, folgt dann die \textbf{spektrale Energiedichte der Photonen}
+\begin{equation*}
+	u(\nu) = \frac{8\pi h\nu^3}{c^3}\frac{1}{e^{\frac{h\nu}{k_\text{B}T}} - 1}.
+\end{equation*}
+
+Differenziert man diese Verteilung, ergibt sich das \textbf{Wien'sche Verschiebungsgesetz}
+\begin{equation*}
+	\lambda_\text{max}\cdot T = \text{const} = \SI{2.9e-3}{\kelvin\meter}.
+\end{equation*}
+Dieses Gesetz beschreibt die Lage des Peaks in der spektralen Leistungsverteilung der Strahlung eines Körpers.
