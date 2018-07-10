@@ -29,3 +29,41 @@ Differenziert man diese Verteilung, ergibt sich das \textbf{Wien'sche Verschiebu
 	\lambda_\text{max}\cdot T = \text{const} = \SI{2.9e-3}{\kelvin\meter}.
 \end{equation*}
 Dieses Gesetz beschreibt die Lage des Peaks in der spektralen Leistungsverteilung der Strahlung eines Körpers.
+
+\section{Das H-Atom}
+Ohne relativistische Korrekturen, Fein-/Hyperfreinstruktur kann man die Schrödingergleichung für das Wasserstoffatom
+\begin{equation*}
+	\left(\frac{\hbar^2}{2m}-V_\text{c}(r)\right)\psi(r,\theta,\varphi) = E\psi(r,\theta,\varphi)
+\end{equation*}
+mit $V_\text{c}(r)=-\frac{e^2}{4\pi\varepsilon_0r}$ durch einen Separationsansatz
+\begin{equation*}
+	\psi(r,\theta,\varphi) = R_{nl}(r)\cdot Y_{lm}(\theta,\varphi)
+\end{equation*}
+lösen.
+Dabei sind die $R_{nl}(r)$ im Wesentlichen die zugeordneten Laguerre-Polynome und $Y_{lm}(\theta,\varphi)$ die Kugelflächenfunktionen.
+Diese Lösung führt auf die unkorrigierten Eigenenergien
+\begin{equation*}
+	E_n = -\frac{E_\text{R}}{n^2},
+\end{equation*}
+also ist das System hochgradig entartet bezüglich $l,m$.
+$E_\text{R}$ ist die Rydberg-Energie, Wert irrelevant.
+
+Die Energieniveaus spalten auf, wenn man die Fein-/Hyperfreinstruktur miteinbezieht.
+
+\section{Stern-Gerlach-Experiment}
+\textbf{Anordnung}  Ein Strahl von Silberatomen durchfliegt im Vakuum den Spalt zwischen den Polschuhen eines Magneten.
+Durch die spezielle Form des Magneten weist das B-Feld quer zum Strahl eine starke Inhomogenität auf.
+Nachdem der Strahl das Feld durchlaufen hat, schlagen sich die Silberatome auf einer Glasplatte nieder.
+
+\textbf{Resultat}  Es werden zwei voneinander getrennte Flecke gefunden, das heißt, das Magnetfeld spaltet den Strahl in zwei getrennte Strahlen auf.
+
+\textbf{Erklärung}  Da sich im Silberatom in der äußersten Valenzschale (5s) ein einzelnes Elektron befindet und sich der Gesamtdrehimpuls der inneren Schalen zu 0 addiert (abgeschlossene Schalen), besteht der Gesamtdrehimpuls der Atome also nur aus dem Spin dieses einen Elektrons.
+Der entscheidende Unterschied zum Elektron ist hierbei aber, dass das Silberatom elektrisch neutral ist, somit im Magnetfeld keine Lorentzkraft erfahren kann.
+Ferner könnte es auch nicht durch elektrische Störfelder abgelenkt werden.
+
+Das Silberatom hat also ein magnetisches Dipolmoment $\mvec{\mu}$, auf das im inhomogenen Feld $\mvec{B}$ eine Kraft wirkt.
+Klassisch müsste sich also, je nach Anstellwinkel zur Feldrichtung, eine kontinuierliche Aufweitung des Strahles in $\pm z$-Richtung beobachten lassen.
+
+Da aber das magnetische Dipolmoment vom Drehimpuls $\mvec{S}$ her rührt und der Spin des Elektrons sich im Feld entweder parallel oder antiparallel anordnet (Quantenzahl $m=\pm\frac{1}{2}$), beobachtet man zwei diskrete Flecken.
+
+Je nach dem, in welchem Orbital sich ein Valenzelektron befinden würde (s,p,d,f,\dots), würde man eine Aufspaltung in ggf. mehr als nur zwei Strahlen beobachten, je nach erlaubten Quantenzahlen $m$.
