@@ -67,3 +67,43 @@ Klassisch müsste sich also, je nach Anstellwinkel zur Feldrichtung, eine kontin
 Da aber das magnetische Dipolmoment vom Drehimpuls $\mvec{S}$ her rührt und der Spin des Elektrons sich im Feld entweder parallel oder antiparallel anordnet (Quantenzahl $m=\pm\frac{1}{2}$), beobachtet man zwei diskrete Flecken.
 
 Je nach dem, in welchem Orbital sich ein Valenzelektron befinden würde (s,p,d,f,\dots), würde man eine Aufspaltung in ggf. mehr als nur zwei Strahlen beobachten, je nach erlaubten Quantenzahlen $m$.
+
+\section{Spin-Bahn-Kopplung und der Paschen-Back-Effekt}
+Die Spin-Bahn-Kopplung ist in einem semiklassischen Modell eine Art ''interner Zeeman-Effekt''.
+Das Feld wird dabei durch die Bahnbewegung der Elektronen erzeugt (Biot-Savart-Gesetz).
+Das magnetische Moment des Spins koppelt somit an den Bahndrehimpuls.
+Wenn wir also diese Korrektur in den Hamiltonian miteinbeziehen wird die Entartung z.B. im H-Atom teilweise aufgehoben
+\begin{equation*}
+	E_{nls} \propto E_n + \Delta E_\text{LS}(j,l).
+\end{equation*}
+Gute Quantenzahlen sind nun $n, l, s, j, m_j$.
+
+Zustände werden nun mit der Nomenklatur $n^{2s+1}l_j$ bezeichnet.
+
+Wird nun allerdings ein großes, externes Magnetfeld angelegt, entkoppeln $\mvec{L}$ und $\mvec{S}$ und präzedieren unabhängig um die Richtung des magnetischen Feldes.
+$J$ ist somit keine Quantenzahl von Eigenzuständen mehr.
+Da $\mvec{L}$ und $\mvec{S}$ nun unabhängig an das magnetische Feld koppeln, ergibt sich ein neues Spektrum, das meistens einfacher aussieht, da weniger Zustände aufspalten.
+
+Man nennt dieses Phänomen \textbf{Paschen-Back-Effekt}.
+
+\section{LS-Kooplung bei Mehrelektronensystemen}
+\subsection{Mehr Elektronen}
+Bei moderat vielen Elektronen (bis etwa Kohlenstoff) addieren die Einzelspins und Einzelbahndrehimpulse zu Gesamtspins/-drehimpulsen
+\begin{equation*}
+	\mvec{L} = \sum_i\mvec{L_i}\quad\mvec{S} = \sum_i\mvec{S_i}.
+\end{equation*}
+Diese Gesamtdrehimpulse koppeln dann zum Gesamtdrehimpuls
+\begin{equation*}
+	\mvec{J} = \mvec{L} + \mvec{S}.
+\end{equation*}
+
+\subsection{Sehr viele Elektronen, hohe Kernladungszahlen}
+Bei hohen Kernladungszahlen wird die Spin-Bahn-Wechselwirkung groß, weil $V_\text{LS}\propto Z^4$.
+Dann liegt eine jj-Kopplung vor, bei denen für jedes Elektron für sich Spin-Bahn-Kopplung gilt
+\begin{equation*}
+	\mvec{j_i} = \mvec{l_i} + \mvec{s_i},
+\end{equation*}
+welche dann zu einem Gesamtdrehimpuls koppeln
+\begin{equation*}
+ \mvec{J} = \sum_i\mvec{j_i}.
+\end{equation*}
