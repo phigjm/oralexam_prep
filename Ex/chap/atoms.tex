@@ -77,6 +77,7 @@ Wenn wir also diese Korrektur in den Hamiltonian miteinbeziehen wird die Entartu
 	E_{nls} \propto E_n + \Delta E_\text{LS}(j,l).
 \end{equation*}
 Gute Quantenzahlen sind nun $n, l, s, j, m_j$.
+Die Quantenzahl $j$ nimmt dabei die Werte $\{l+s,\dots,|l-s|\}$ an.
 
 Zustände werden nun mit der Nomenklatur $n^{2s+1}l_j$ bezeichnet.
 
@@ -86,7 +87,7 @@ Da $\mvec{L}$ und $\mvec{S}$ nun unabhängig an das magnetische Feld koppeln, er
 
 Man nennt dieses Phänomen \textbf{Paschen-Back-Effekt}.
 
-\section{LS-Kooplung bei Mehrelektronensystemen}
+\section{LS-Kopplung bei Mehrelektronensystemen}
 \subsection{Mehr Elektronen}
 Bei moderat vielen Elektronen (bis etwa Kohlenstoff) addieren die Einzelspins und Einzelbahndrehimpulse zu Gesamtspins/-drehimpulsen
 \begin{equation*}
@@ -107,3 +108,19 @@ welche dann zu einem Gesamtdrehimpuls koppeln
 \begin{equation*}
  \mvec{J} = \sum_i\mvec{j_i}.
 \end{equation*}
+
+\section{Hyperfeinstruktur}
+Wird nun noch die Wechselwirkung des Kernspins mit dem elektronischen Magnetfeld miteinbezogen, so ergibt sich die Hyperfeinstruktur.
+Wir führen einen neuen Gesamtdrehimpuls $\mvec{F} = \mvec{J} + \mvec{I}$ ein, mit dem bereits bekannten $\mvec{J} = \mvec{L} + \mvec{S}$ und dem Kernspin $\mvec{I}$.
+Wie bei der LS-Kopplung spalten die Feinstrukturzustände nun wieder auf.
+Dabei kann die Quantenzahl $f$ die Werte $\{j+i,\dots,|j-i|\}$ annehmen.
+
+\textbf{Beispiel}  Wasserstoff im Zustand $2P_\frac{3}{2}$: $f=2,1$.
+Die H-Energieniveaus spalten also auf in mindestens 2 Niveaus.
+
+\section{Lamb-Shift}
+Der Lamb-Shift ist eine Erklärung dafür, warum z.B. der Zustand $2S_\frac{1}{2}$ und $2P_\frac{1}{2}$ im Wasserstoffatom unterschiedliche Energien haben, obwohl die Dirac-Theorie vorhersagt, dass diese Zustände die gleiche Energie haben müssten.
+Es lässt sich im Rahmen der QED dadurch erklären, dass die elektrischen und magnetischen Perturbationen im QED-Vakuum das elektrische Feld am Ort des Kerns stören.
+Das ist ein One-Loop-Effekt in der QED, bei der ein Photon vom Atom emittiert und gleich wieder absorbiert wird.
+Diese Störungen induzieren ihrerseits eine Störung des Position des Elektrons, welches aufgrund dessen eine Zitterbewegung ausführt.
+Diese Zitterbewegung führt je nach $l$ und $j$ zu einem Shift in der Energie.
