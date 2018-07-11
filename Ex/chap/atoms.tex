@@ -124,3 +124,38 @@ Es lässt sich im Rahmen der QED dadurch erklären, dass die elektrischen und ma
 Das ist ein One-Loop-Effekt in der QED, bei der ein Photon vom Atom emittiert und gleich wieder absorbiert wird.
 Diese Störungen induzieren ihrerseits eine Störung des Position des Elektrons, welches aufgrund dessen eine Zitterbewegung ausführt.
 Diese Zitterbewegung führt je nach $l$ und $j$ zu einem Shift in der Energie.
+
+\section{Magnetische Resonanz}
+Für den Grenzfall starker Magnetfelder ergibt sich aus dem Zeeman-Effekt bekanntermaßen der Paschen-Back-Effekt.
+Betrachtet man die Hyperfeinstruktur eines Atomes, so entkoppeln für große Magnetfelder also analog zur LS-Kopplung der Gesamtdrehimpuls $\mvec{J}$ und der Kernspin $\mvec{I}$.
+Diese Vektoren präzedieren unabhängig voneinander um die Magnetfeldachse.
+
+Für die Energieverschiebung gilt
+\begin{equation*}
+	\Delta E_\text{HFS} = g_\text{J}\mu_\text{B}m_\text{J}B_0 - g_\text{I}\mu_\text{K}m_\text{I}B_0 + a\cdot m_\text{I}m_\text{J}.
+\end{equation*}
+
+\subsection{NMR}
+Man kann sich dieses Energiesplitting bei der \textbf{magnetischen Resonanz} zu Nutze machen.
+Der Vorgang dabei ist
+\begin{itemize}
+	\item Das Ausrichten der Kernspins durch ein externes, statisches Magnetfeld $B_0$.
+	\item Die Störung dieser Ausrichtung durch ein schwaches, magnetisches Wechselfeld $B_\sim$.
+\end{itemize}
+Um den Präzessionskegel weitestmöglich zu weiten und damit effektiv das NMR-Signal zu erhöhen, wird das Wechselfeld orthogonal zum statischen Feld gewählt.
+Die Frequenz des Wechselfeldes muss dabei der Larmorfrequenz des Kernes entsprechen, um Energieübergänge zwischen den Zeeman-Levels zu ermöglichen.
+Es erfolgt also nur dann eine magnetische Resonanz, wenn $h\nu = g_\text{I}\mu_\text{K}B_0=\omega_\text{L}$.
+
+Das selbe Prinzip kann man bei paramagnetischen Stoffen (Atome mit ungepaarten Elektronenspins) benutzen, die Resonanzbedingung ist dann aber durch das Bohr-Magneton und den Landé-Faktor des Elektrons zu ersetzen:
+\begin{equation*}
+	h\nu = g_\text{S}\mu_\text{B}B_0.
+\end{equation*}
+\begin{figure}
+	\centering
+	\includegraphics[width=.5\textwidth]{./img/nmrspec.jpg}
+	\caption{NMR-Spektrum von Ethylalkohol. Die 3 Signale haben ein Flächenverhältnis 1:2:3. Sie gehören zu den Protonenspins in der Hydroxy-, Methylen- und Methylgruppe mit jeweils 1, 2, und 3 Protonen (H-Atome)}
+	\label{fig:nmrspec}
+\end{figure}
+Man kann mit magnetischer Resonanz Spektroskopie betreiben.
+In \autoref{fig:nmrspec} sieht man ein solches Spektrum, die Peaks sind Frequenzen des Wechselfeldes, für die die Resonanzbedingung erfüllt ist.
+Da das Kernmagneton abhängig vom jeweiligen Kern ist, gibt es nach $h\nu = g_\text{I}\mu_\text{K}B_0$ verschiedene Frequenzen, für die das der Fall ist.
