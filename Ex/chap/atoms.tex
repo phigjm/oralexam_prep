@@ -159,3 +159,53 @@ Das selbe Prinzip kann man bei paramagnetischen Stoffen (Atome mit ungepaarten E
 Man kann mit magnetischer Resonanz Spektroskopie betreiben.
 In \autoref{fig:nmrspec} sieht man ein solches Spektrum, die Peaks sind Frequenzen des Wechselfeldes, für die die Resonanzbedingung erfüllt ist.
 Da das Kernmagneton abhängig vom jeweiligen Kern ist, gibt es nach $h\nu = g_\text{I}\mu_\text{K}B_0$ verschiedene Frequenzen, für die das der Fall ist.
+
+\section{Pauli-Prinzip: Ortho- und Parahelium}
+Nach dem Pauli-Prinzip muss die Gesamtwellenfunktion von \textbf{Fermionen antisymmetrisch} und die von \textbf{Bosonen symmetrisch} unter Vertauschung zweier Teilchen sein.
+
+Helium setzt sich aus 2 Elektronen und dem Kern zusammen.
+Es gibt also zwei Möglichkeiten, eine antisymmetrische Wellenfunktion zu konstruieren:
+\begin{itemize}
+	\item \textbf{Parahelium:} Gesamtspin 0, d.h. antisymmetrische Spinwellenfunktion, symmetrische Bahnwellenfunktion.
+	Beide Elektronen sind dabei im Grundzustand im 1s-Orbital. Singulett.
+	\item \textbf{Orthohelium:} Gesamtspin 1, d.h. symmetrische Spinwellenfunktion, antisymmetrische Bahnwellenfunktion.
+	Die Elektronen können demnach nicht im gleichen Orbital leben, im Grundzustand ist ein Elektron in 1s, das zweite in 2s. Triplett.
+\end{itemize}
+
+\section{Das Aufbauprinzip}
+\begin{figure}
+	\centering
+	\includegraphics[width=.5\textwidth]{./img/madelung.pdf}
+	\caption{Madelung-Schema zur Auffüllung der Schalen}
+	\label{fig:madelung}
+\end{figure}
+Besetzt ein Elektron ein Orbital mit $l=n-1$, so haben wir es mit einem Orbital zu tun, das einer klassischen Kreisbahn sehr nahe kommt.
+Für $l\ll n-1$ hingegen ist der Orbit stark elliptisch.
+Das Elektron kommt auf seiner Tauchbahn dem unabgeschirmten Kern häufiger sehr nahe, was auf Grund der Attraktivität der Wechselwirkung zu einer Absenkung des Energieniveaus führt.
+Schalen mit kleineren $(n+l)$-Werten werden aus diesem Grund vorher aufgefüllt.
+
+\autoref{fig:madelung} zeigt das Madelung-Schema, mit dessen Hilfe die Reihenfolge der Auffüllung der Schalen klar wird.
+Es gibt Ausnahmen dieses Aufbauprinzips bei einigen Elementen wie z.B. Lanthan, bei der zuerst die 5d-Unterschale besetzt wird, bevor die 4f-Schale aufgefüllt wird.
+Diese Ausnahmen resultieren aus relativistischen Korrekturen und Elektron-Elektron-Korrelationen, die bei Atomen mit größeren Ordnungszahlen eine immer größere Rolle spielen.
+
+\section{Hund'sche Regeln}
+Um nun Auskunft über die Drehimpulskonfiguration der Elektronenhülle Auskunft geben zu können, werden die Hundschen Regeln eingesetzt, die prinzipiell nur für leichte Atome streng gelten, jedoch können auch für schwere Atome gute Ergebnisse erzielt werden.
+Da die Literatur teilweise unverständlich erklärt, hier meine Version:
+\begin{enumerate}
+	\item Schau dir an, welche Schalen in dem zu bestimmenden Element nicht aufgefüllt sind.
+	Die abgeschlossenen Schalen werden nach dem Aufbauprinzip einfach aufgefüllt und liefern nach dem Pauli-Prinzip einen Gesamtdrehimpuls 0.
+	\item Die Spins innerhalb einer unaufgefüllten Schale wollen den Gesamtspin $S$ maximieren, daher orientieren sie sich möglichst parallel.
+	Sobald jedoch die Schale zur Hälfte gefüllt ist, müssen nach dem Pauli-Prinzip die verbliebenen Spinplätze nun antiparallel aufgefüllt werden.
+	Den Gesamtspin ergeben die ungepaarten Spins in der Schale, bei zwei ungepaarten z.B. $S=1$.
+	\item Danach gilt: Gesamtbahndrehimpuls $L=\sum m_l$ muss maximal sein.
+	Nach dem zweiten Schritt werden die Zustände ja zunächst mit ungepaarten Spins derselben Quantenzahl $m_s$ aufgefüllt, bis die Schale halb aufgefüllt ist.
+	Dies bedeutet nach dem Pauli-Prinzip, dass alle $m_l$ von diesen Elektronen angenommen werden und daher der Gesamtbahndrehimpuls der halb aufgefüllten Schale $L=0$ ist.
+	Als nächstes wird die andere Hälfte der Schale aufgefüllt. Um $L$ zu maximieren hat der erste gepaarte Spin dann $m_l=l$, der zweite $m_l=l-1$, usw.
+	Das $L$ der teilweise aufgefüllten Schale wird also durch die gepaarten Spins bestimmt.
+	\item Als Gesamtdrehimpuls $J$ ergibt sich dann:
+	\begin{itemize}
+		\item Schale weniger als halbvoll: $J=|L-S|$.
+		\item Schale mehr als halbvoll: $J=L+S$.
+	\end{itemize}
+\end{enumerate}
+Für ein Beispiel, siehe \url{https://de.wikipedia.org/wiki/Hundsche_Regeln#Anwendung}.
