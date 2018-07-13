@@ -1,6 +1,51 @@
 \chapter{Atome und Moleküle}
 
-\section{Die Plankverteilung}
+\section{Der Photoeffekt}
+Bestrahlt man die Oberfläche eines Metalles mit Photonen, so werden Elektronen aus dieser herausgelöst.
+Im Rahmen der klassischen Physik erscheinen bei diesem Versuch folgende Resultate als verwunderlich:
+\begin{itemize}
+	\item Die kinetische Energie der herausgelösten Elektronen hängt nicht von der Bestrahlungsstärke des Lichtes ab, sondern alleine von dessen Wellenlänge.
+	\item Die kinetische Energie der Photoelektronen steigt ab einer Grenzfrequenz linear mit der Frequenz des Lichtes an.
+	\item Die Grenzfrequenz hängt dabei nur vom Material der Kathodenoberfläche ab (Austrittsarbeit)
+	\item Die Freisetzung der Elektronen beginnt instantan mit dem Einfall des Lichtes und endet genauso schnell auch mit dem Ende der Bestrahlung.
+\end{itemize}
+
+Man führt diese Beobachtungen auf den Teilchencharakter des Lichtes zurück.
+Die Quantenmechanik konnte dabei erst den Welle-Teilchen-Dualismus des Lichtes deuten.
+
+\section{Der Franck-Hertz-Versuch}
+\begin{figure}
+	\centering
+	\begin{subfigure}{0.4\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{./img/fhversuch.pdf}
+		\caption{Der Versuchsaufbau}
+		\label{fig:fhversuch}
+	\end{subfigure}
+	\begin{subfigure}{0.4\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{./img/fhspec.pdf}
+		\caption{Der Anodenstrom in Abhängigkeit der Beschleunigungsspannung}
+		\label{fig:fhspec}
+	\end{subfigure}
+	\caption{Der Franck-Hertz-Versuch}
+\end{figure}
+\textbf{Aufbau:}  \autoref{fig:fhversuch} zeigt den Aufbau des Versuches.
+Im Glaskolben ist ein schwach unter Druck gesetztes Gas und 3 Elektroden.
+Das Gitter ist gemeinsame Masse im Experiment.
+Die Kathode $K$ wird auf negatives Potenzial gelegt und es werden durch diese Beschleunigungsspannung $U_\text{b}$ Elektronen aus der Kathode herausgelöst und zum Gitter hin beschleunigt.
+Die meisten Elektronen landen dabei im Gitter und werden über die Spannungsquelle zur Kathode rückgeführt.
+Einige Elektronen jedoch passieren das Gitter und fliegen dabei zur Auffangelektrode $A$.
+$A$ wird dabei über die Gegenfeldspannung $U_\text{g}$ negativ aufgeladen und bremst somit die einfallenden Elektronen ab.
+Die Spannung $U_\text{g}$ wird so weit erhöht bis gerade keine Elektronen mehr über das empfindliche Amperemeter messbar sind.
+
+\textbf{Beobachtung}  Erhöht man $U_\text{b}$ bei festem $U_\text{g}$ und misst den Anodenstrom, so ergibt sich \autoref{fig:fhspec}.
+Ab einem gewissen Wert sinkt der Anodenstrom ab und das wiederholt sich in (näherungsweise) festen Abständen.
+Nach jeder Kante steigt dabei die Stromstärke auf einen höheren Wert.
+
+\textbf{Erklärung}  Siehe \url{https://de.wikipedia.org/wiki/Franck-Hertz-Versuch#Erkl%C3%A4rung}.
+
+\section{Die Planckverteilung}
 Im Rahmen der klassischen Physik kann man die spektrale Leistungsverteilung eines schwarzen Körpers relativ einfach zu
 \begin{equation*}
 	M(\lambda)\cdot\text{d}\lambda = \frac{2\pi\cdot c\cdot k_\text{B}T}{\lambda^4}\cdot\text{d}\lambda.
