@@ -1,0 +1,74 @@
+\chapter{Festkörperphysik}
+
+\section{Konstruktion der Wigner-Seitz-Zelle}
+Einen Gitterpunkt wählen und Verbindungsstrecken zu sämtlichen anderen Gitterpunkten durch Normalebenen halbieren.
+Eingegrenztes Gebiet ist dann Wigner-Seitz-Zelle.
+
+\section{Das reziproke Gitter}
+Das zu einem Ortsraumgitter reziproke Gitter ist definiert durch
+\begin{equation*}
+	\mvec{K} = h\mvec{A_1} + k\mvec{A_2} + l\mvec{A_3}\quad h,k,l\in\mathbb{Z}.
+\end{equation*}
+Dabei muss die Relation
+\begin{equation*}
+	\mvec{A_i}\mvec{a_j} = 2\pi\delta_{ij}
+\end{equation*}
+erfüllt sein.
+Man kann die Vektoren $\mvec{A_i}$ durch die Konstruktionsvorschrift
+\begin{equation*}
+	\mvec{A_i} = 2\pi\varepsilon_{ijk}\frac{\mvec{a_k}\times\mvec{a_k}}{\mvec{a_1}\cdot(\mvec{a_2}\times\mvec{a_3})}.
+\end{equation*}
+
+\section{Beugung am Gitter}
+Damit eine Beugung auftritt muss gelten
+\begin{equation*}
+	\Delta\mvec{k} = \mvec{K},
+\end{equation*}
+mit $\Delta\mvec{k}=\mvec{k}-\mvec{k'}$, dem Differenzwellenvektor der einfallenden Welle und $\mvec{K}$ einem reziproken Gittervektor.
+
+Multiplizieren wir von links mit $\mvec{a_i}$, dann erhalten wir die \textbf{Laue-Bedingung}
+\begin{align*}
+	\mvec{a_1}\cdot\Delta\mvec{k} &= 2\pi h \\
+	\mvec{a_2}\cdot\Delta\mvec{k} &= 2\pi k \\
+	\mvec{a_3}\cdot\Delta\mvec{k} &= 2\pi l.
+\end{align*}
+
+Andere Form:
+\begin{equation*}
+	\mvec{G}^2 = 2\mvec{k}\cdot\mvec{G}.
+\end{equation*}
+
+Andere Form:
+\begin{equation*}
+	2d\sin\theta = m\lambda\quad m\in\mathbb{Z}.
+\end{equation*}
+
+\section{Die erste Brillouin-Zone}
+Die erste Brillouin-Zone ist die Wigner-Seitz-Zelle des reziproken Gitters.
+Nach der ersten Brillouin-Zone wiederholt sich die gesamte Kristallstruktur periodisch, d.h. es reicht, alle Prozesse in der ersten Brillouin-Zone zu beschreiben, um die Physik des Kristalles vollständig zu charakterisieren.
+
+\section{Atomstrukturfaktoren}
+Wie bereits aus der Streuung bekannt, ist die Streuamplitude in Bornscher Näherung die FT der Ladungsverteilung
+\begin{equation*}
+	f(\mvec{k})\propto\int_{-\infty}^\infty\text{d}^3r\rho(\mvec{r})e^{-i\Delta\mvec{k}\cdot\mvec{r}} = N\cdot\underbrace{\int_\text{EZ}\text{d}^3r\rho(\mvec{r})e^{-i\mvec{K}\cdot\mvec{r}}}_\text{Strukturfaktor}.
+\end{equation*}
+Befinden sich nun $s$ Atome in der Einheitszelle, so können wir den Strukturfaktor schreiben als
+\begin{equation*}
+	S_{\mvec{K}} = \sum_j^se^{-i\mvec{K}\cdot\mvec{r_j}}\underbrace{\int_\text{EZ}\text{d}^3r\rho(\mvec{r}-\mvec{r_j})e^{-i\mvec{K}\cdot(\mvec{r}-\mvec{r_j})}}_\text{Atomformfaktoren $f_j$}.
+\end{equation*}
+Ersetzen wir schlussendlich $\mvec{K}\cdot\mvec{r_j} = 2\pi(hx_{1j} + kx_{2j} + lx_{3j})$, so ergibt sich
+\begin{equation*}
+	S_{\mvec{K}}(h,k,l) = \sum_j^sf_je^{-2\pi\iu(hx_{1j} + kx_{2j} + lx_{3j})}.
+\end{equation*}
+
+Wir interpretieren:
+Selbst wenn die Bragg-Bedingung für eine Beugung erfüllt ist, hängt es von der Basis ab, ob der Strukturfaktor 0 ist und somit kein Beugungsreflex sichtbar ist.
+
+\textbf{Beispiel}  bcc, z.B. Metall-Na. Kubische Einheitszelle mit Basisatomen $\mvec{r_1} = (000)^\text{T}$ und $\mvec{r_2} = \frac{1}{2}(111)^\text{T}$.
+\begin{equation*}
+	S_{\mvec{K}}(h,k,l) = f\cdot\begin{cases}
+																0,\quad(h+k+l)\text{ gerade} \\
+																2,\quad(h+k+l)\text{ ungerade}
+															\end{cases}
+\end{equation*}
+Also liefern in diesem Fall nur Miller-Ebenen mit $(h+k+l)$ ungerade einen Beugungsreflex.
