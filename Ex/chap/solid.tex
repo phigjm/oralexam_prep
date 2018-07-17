@@ -201,3 +201,62 @@ Je nach Füllung der Bänder unterscheidet man zwischen:
 	\item \textbf{Halbleitern:} Valenzband voll, Leitungsband leer, kleine Bandlücke, sodass durch Zufuhr von Energie überwunden werden kann.
 	\item \textbf{Metallen:} Valenzband voll, Leitungsband nicht ganz voll, sodass Elektronen leicht durch Spannung in höhere erlaubte Niveaus innerhalb des Leitungsbandes gehoben werden können.
 \end{itemize}
+
+\section{Transport}
+Es gelten die Transportgleichungen
+\begin{align*}
+	\grad\frac{\eta}{e} &= \frac{\mvec{j}}{\sigma} + \varepsilon\grad T \\
+	\mvec{w} &= \Pi\mvec{j} - \kappa\grad T.
+\end{align*}
+Koeffizienten sind (wie immer) irrelevant an dieser Stelle.
+
+Die Transportgleichungen verknüpfen somit eine elektr(ochem)ische Potenzialdifferenz $\grad\frac{\eta}{e}$ (auch: Spannung) mit einem Temperaturgradienten und vice versa.
+So funktionieren Thermoelemente (basically).
+
+\section{Bestimmung von Fermi-Oberflächen}
+Die Menge der Punkte, auf die Impulsvektoren von Elektronen mit der Fermi-Energie zeigen, bilden eine geschlossene Fläche bzw. wenige geschlossene Flächen, die Fermi-Oberfläche(n) genannt wird bzw. werden.
+Die Fermi-Oberfläche eines Kristalls gibt Auskunft über elektrische und magnetische Eigenschaften des Materials, da beispielsweise nur Elektronen an der Fermi-Oberfläche zum elektrischen Stromfluss beitragen.
+Ferromagnetische Metalle haben daher im einfachsten Fall zwei Fermi-Flächen, je eine für die zwei möglichen Orientierungen des Spins.
+Im Gegensatz dazu haben undotierte Halbleiter oder Isolatoren keine Fermi-Fläche, da deren Fermi-Energie gerade in ihrer Bandlücke liegt und es somit keine Elektronen gibt, deren Impulsvektoren auf einen erlaubten Zustand zeigen.
+Bei Halbleitern verschiebt man daher durch Dotierung das Fermi-Niveau so weit, bis es in einem erlaubten Zustand liegt und somit ein Stromfluss möglich ist.
+
+Experimentell lässt sich eine Fermi-Oberfläche z.B. durch den \textbf{De-Haas-van-Alphen-Effekt} bestimmen.
+
+\subsection{DHvA-Effekt}
+Wir stellen uns die Atome klassisch vor, d.h. das Elektron beschreibt eine elliptische Bahn um den Kern.
+In minimaler Kopplung lautet der Hamiltonian des Problemes
+\begin{equation*}
+	H = \frac{1}{2m}\left(\mvec{p}-q\mvec{A}\right)^2.
+\end{equation*}
+O.B.d.A. sei das B-Feld in z-Richtung orientiert, statisch und homogen.
+Dann quantisiert das System in Landau-Niveaus der Energien
+\begin{equation*}
+	E_n = \hbar\omega_\text{c}\left(n+\frac{1}{2}\right),
+\end{equation*}
+mit $\omega_\text{c}= \frac{qB}{m}$ (dabei wurde die ganze Zeit das Zeeman-Splitting außer Acht gelassen).
+
+Ohne ein solches B-Feld hätten wir die Zustandsdichte
+\begin{equation*}
+	\nu(E) = \frac{2mL^2}{2\pi\hbar^2}.
+\end{equation*}
+Mit einem angelegten B-Feld ''kondensieren'' nun alle Zustände im Energieintervall der Breite $\hbar\omega_\text{c}$ nun auf einem Landau-Niveau, also
+\begin{equation*}
+	N_\text{1Niveau} = \hbar\omega_\text{c}\cdot\nu(E) = L^2\cdot\frac{2eB}{\hbar}.
+\end{equation*}
+
+Bei $n$ vollständig besetzten Landau-Levels und konstanter Elektronenzahl $N$ haben wir also in 2D (Schnittfläche Magnetfeld und Fermi-Oberfläche)
+\begin{equation*}
+	N = 2\frac{\pi k_\text{F}^2}{\frac{4\pi^2}{L^2}} = 2\frac{S_\text{F}}{\frac{4\pi^2}{L^2}} = n\cdot L^2\cdot\frac{2eB}{\hbar}
+\end{equation*}
+und daher
+\begin{equation*}
+	B_n^{-1} = n\cdot\frac{2\pi e}{\hbar}\cdot\frac{1}{S_\text{F}}.
+\end{equation*}
+
+Ähnliche Überlegungen erhält man für z.B. die spezifische Wärme, magnetische Suszeptibilität etc. ebenfalls Oszillationen in $\frac{1}{B}$.
+
+Man kann aus diesen De-Haas-van-Alphen-Oszillationen nun die Periode $P$ messen und erhält über
+\begin{equation*}
+	P(B^{-1}) = \frac{2\pi e}{\hbar S_\text{F}}
+\end{equation*}
+dann die Fermi-Oberfläche.
