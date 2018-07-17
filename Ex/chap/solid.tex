@@ -93,3 +93,59 @@ Es sind Beugungspunktreflexe zu sehen.
 Dadurch, dass die Röntgenstrahlen polychromatisch sind, erfüllen mehrere Gitterschichten die Bragg-Bedingung gleichzeitig.
 Dadurch lässt sich aber ein bestimmter Reflex nicht mehr eindeutig einer Wellenlänge zuordnen.
 Die Datenverarbeitung ist daher meist mühsam und zeitaufwändig.
+
+\section{Phononen: Lineare Kette}
+Betrachten wir nun eine lineare Kette aus miteinander gekoppelten Atomen (modelliert durch Kugeln der Massen $m(M)$ verbunden durch Federn mit Federkonstante $D\rightarrow$ harmonische Näherung).
+
+Da das System eine diskrete Natur aufweist, ist die Zahl der unterscheidbaren Vibrationsmoden endlich, wobei $\lambda_\text{min}=2a$ und $\lambda_\text{max}=2L$ (mit der Kettenlänge $L$) die minimalen und maximalen Wellenlängen der Moden sind.
+Definiert man nun eine \textbf{Modenzahl} $n=\frac{2L}{\lambda_n}$, folgt die maximale Zahl der Moden
+\begin{equation*}
+	n_\text{max}=\frac{2L}{\lambda_\text{min}}=\frac{L}{a},
+\end{equation*}
+welche gleich der Anzahl Atome in der Kette ist.
+
+Auf gleiche Weise erhalten wir die maximale Wellenzahl
+\begin{equation*}
+	k_\text{max}=\frac{2\pi}{\lambda_\text{min}}=\frac{\pi}{a},
+\end{equation*}
+die mit den Grenzen der ersten Brillouin-Zone für ein einfach kubisches Gitter übereinstimmt.
+
+\subsection{Gleiche Massen}
+\begin{figure}[tbp]
+	\centering
+	\includegraphics[width=0.5\textwidth]{./img/dispersion_single.pdf}
+	\caption{\textbf{Dispersionsrelation für identische Atome} Jede mögliche Frequenz taucht im Intervall zwischen 0 und $\frac{\pi}{a}$ auf, was bedeutet, dass jede Wellenzahl außerhalb dieser ersten Brillouin-Zone ununterscheidbar von einer bereits darin enthaltenen Schwingung ist.}
+	\label{fig:dispersion_single}
+\end{figure}
+Sind nur Atome von der gleichen Sorte (Masse $m$) vorhanden, lässt sich durch Aufstellen der Newtonschen Bewegungsgleichung einfach die Dispersionsrelation
+\begin{equation}
+	\omega(k) = \sqrt{\frac{4D}{m}}\abs{\sin\left(\frac{ka}{2}\right)}
+\end{equation}
+herleiten, die in \autoref{fig:dispersion_single} aufgetragen ist.
+
+Für kleine $k$ ist $\sin(k)\approx k$, daher folgt für die Dispersionsrelation
+\begin{equation*}
+	\omega(k)\approx \sqrt{\frac{Da^2}{m}}\abs{k}.
+\end{equation*}
+Es folgt also, dass für diesen Fall, die Phasen ($v_\text{ph}=\frac{\omega}{k}$)- und Gruppengeschwindigkeit ($v_\text{gr}=\frac{\text{d}\omega}{\text{d}k}$) gleich ist
+\begin{equation}\label{eq:sound_single}
+	v_\text{ph} = v_\text{g}\approx \sqrt{\frac{Da^2}{m}}.
+\end{equation}
+
+\subsection{Zwei Atomsorten}
+\begin{figure}[tbp]
+	\centering
+	\includegraphics[width=0.5\textwidth]{./img/dispersion_alternating.pdf}
+	\caption{\textbf{Dispersionsrelation einer Kette mit zwei Atomsorten (abwechselnd)} Zwischen dem optischen und akustischen Zweig der Dispersionsrelation ist eine \textbf{Bandlücke} sichtbar (rot). Wellen mit Frequenzen innerhalb dieser Lücke können im Kristall nicht propagieren.}
+	\label{fig:dispersion_alternating}
+\end{figure}
+Enthält die Kette nun zwei verschiedene Atomsorten der Massen $m_1$ und $m_2$, so hat die Dispersionsrelation nach der Lösung der Bewegungsgleichungen zwei Lösungen:
+\begin{equation}
+	\omega_\pm^2(k) = \frac{D}{\mu} \pm D\sqrt{\frac{1}{\mu^2} - \frac{4}{m_1 m_2}\sin^2\left(k a\right)},
+\end{equation}
+mit der reduzierten Masse $\mu = \frac{m_1 m_2}{m_1 + m_2}$.
+
+Für Kristalle mit mindestens zwei verschiedenen Atomsorten in einer primtiven Elementarzelle erzeugt die Dispersionsrelation zwei Arten von Photonen, die akustischen und optischen Phononen.
+Sie korrespondieren jeweils mit den $\omega_{-}$ und $\omega_{+}$ Lösungen, welche in \autoref{fig:dispersion_alternating} zu sehen sind (+ ist opt., - ist akust.).
+In akustischen Moden schwingen alle Atome in Phase, während bei optischen Moden jedes Nachbaratom einen Phasenversatz von 180° relativ zum nächsten hat.
+Daher entsteht eine Bandlücke in einer bestimmten Frequenzgegend, sodass Wellen mit Frequenzen innerhalb dieser Bandlücke nicht propagieren können.
