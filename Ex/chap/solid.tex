@@ -94,7 +94,7 @@ Dadurch, dass die Röntgenstrahlen polychromatisch sind, erfüllen mehrere Gitte
 Dadurch lässt sich aber ein bestimmter Reflex nicht mehr eindeutig einer Wellenlänge zuordnen.
 Die Datenverarbeitung ist daher meist mühsam und zeitaufwändig.
 
-\section{Phononen: Lineare Kette}
+\section{Phononen: Lineare Kette}\label{sec:linear}
 Betrachten wir nun eine lineare Kette aus miteinander gekoppelten Atomen (modelliert durch Kugeln der Massen $m(M)$ verbunden durch Federn mit Federkonstante $D\rightarrow$ harmonische Näherung).
 
 Da das System eine diskrete Natur aufweist, ist die Zahl der unterscheidbaren Vibrationsmoden endlich, wobei $\lambda_\text{min}=2a$ und $\lambda_\text{max}=2L$ (mit der Kettenlänge $L$) die minimalen und maximalen Wellenlängen der Moden sind.
@@ -149,3 +149,55 @@ Für Kristalle mit mindestens zwei verschiedenen Atomsorten in einer primtiven E
 Sie korrespondieren jeweils mit den $\omega_{-}$ und $\omega_{+}$ Lösungen, welche in \autoref{fig:dispersion_alternating} zu sehen sind (+ ist opt., - ist akust.).
 In akustischen Moden schwingen alle Atome in Phase, während bei optischen Moden jedes Nachbaratom einen Phasenversatz von 180° relativ zum nächsten hat.
 Daher entsteht eine Bandlücke in einer bestimmten Frequenzgegend, sodass Wellen mit Frequenzen innerhalb dieser Bandlücke nicht propagieren können.
+
+\section{Debye-Modell}
+Das Debye-Modell gibt eine Methode zur Berechnung des Beitrags der Phononen zur spezifischen Wärme eines Kristallgitters vor.
+Es stellt sich heraus, dass dieser Beitrag der wesentliche ist.
+
+Gegenüber dem Einstein-Modell, welches $N$ unabhängige Oszillatoren mit identischer Frequenz annimmt, geht das Debye-Modell von einer Vielzahl möglicher Frequenzen und einer von Null verschiedenen Ausbreitungsgeschwindigkeit aller Wellen bzw. Phononen aus.
+Jedoch wird durchgehend die Langwellennäherung vorausgesetzt, das heißt, es wird der Einfachheit halber angenommen, dass bis zu einer Grenzfrequenz, der sog. Debyefrequenz $\omega_\text{D}$, immer strenge Proportionalität zwischen Frequenz und Wellenvektor (also eine lineare Dispersionsrelation) gilt,
+\begin{equation*}
+	\omega(k) = v_\text{s}\cdot k,
+\end{equation*}
+wobei ein longitudinaler und zwei transversale Schallwellen-Freiheitsgrade vorausgesetzt werden.
+
+Die spezfische Wärme bei konstantem Volumen ist dann $\propto \left(\frac{T}{\theta_\text{D}}\right)^3$ mit der Debye-Temperatur $\theta_\text{D}=\frac{\hbar\omega_\text{max}}{k_\text{B}}$.
+Die Debye-Temperatur bezeichnet dabei die Temperatur, bei der alle möglichen Zustände gerade besetzt sind.
+
+\section{Das Bloch-Theorem}
+Es sei ein periodisches Potenzial $V(\mvec{r}+\mvec{R}) = V(\mvec{r})$ gegeben.
+Dann existiert eine Basis von Lösungen der stationären Schrödinger-Gleichung
+\begin{equation*}
+	\psi(\mvec{r}) = e^{\iu\mvec{k}\cdot\mvec{r}}\cdot u_{\mvec{k}}(\mvec{r}).
+\end{equation*}
+Dies sind sogenannte \textbf{Bloch-Wellen}.
+
+Periodische Potenziale trifft man natürlich in Gittern an, weshalb dies so wichtig für die Festkörperphysik ist.
+
+\section{Das Bänder-Modell}
+Nähert man die elektronische Konfiguration innerhalb eines periodischen Gitters als frei an, so ergibt sich nach der stationären Schrödingergleichung für Elektronen eine Dispersionsrelation von
+\begin{equation*}
+	E(k) = \frac{\hbar^2 k_n^2}{2m},
+\end{equation*}
+in einer Dimension mit diskreten, erlaubten $k_n$-Werten, wie in \autoref{sec:linear} besprochen.
+
+Die Dispersionsrelation der freien Elektronen ist also periodisch parabolisch.
+Wir können die Periodizität in das reduzierte Zonenschema durch Spiegelung überführen (wenn du nicht weißt, wie das geht, dann hör' genau hier auf zu lesen und geh' deine Ex5-VL nochmal durch.).
+Ist man jedoch am Rand der ersten Brillouin-Zone angekommen, so erfüllen die Elektronen gerade die Bragg-Bedingung und werden zur anderen Seite der ersten Brillouin-Zone gespiegelt.
+Daher bilden die Elektronen hier stehende Wellen aus.
+Die Aufenthaltswahrscheinlichkeit der Elektronen kann dabei auf zwei Arten im periodischen Potential der Kerne einrasten:
+\begin{itemize}
+	\item \textbf{Maxima der $|\psi|^2$ auf den Atomrümpfen:} Aufgrund der nun festeren Coulomb-Bindung der Elektronen mit den Atomrümpfen wird die Energie im Vergleich zur parabolischen Struktur dort abgesenkt (Parabel macht Knick nach unten).
+	\item \textbf{Maxima der $|\psi|^2$ zwischen den Atomrümpfen:} Die Elektronen sind nun ''weiter von den Atomrümpfen entfernt'', daher wird die Energie wegen der schwächeren Coulomb-Anziehung nun angehoben (Parabel macht Knick nach oben).
+\end{itemize}
+
+Insgesamt ergibt sich durch die Parabelknicke somit eine ''Bandlücke'' von nicht erlaubten, elektronischen Zuständen.
+Unter Beachtung des Pauli-Prinzips können die Bänder nun von unten mit Elektronen aufgefüllt werden, bei \SI{0}{\kelvin} bis zur Fermi-Energie $E_\text{F}$.
+Bei Raumtemperatur ist die Fermi-Verteilung nur näherungsweise eine Step-Function, daher werden einige Zustände unterhalb der Fermi-Energie nicht besetzt, während einige Zustände oberhalb noch aufgefüllt werden.
+
+Je nach Füllung der Bänder unterscheidet man zwischen:
+\begin{itemize}
+	\item \textbf{Isolatoren:} Valenzband voll, Leitungsband leer, große Bandlücke
+	\item \textbf{Halbleitern:} Valenzband voll, Leitungsband leer, kleine Bandlücke, sodass durch Zufuhr von Energie überwunden werden kann.
+	\item \textbf{Metallen:} Valenzband voll, Leitungsband nicht ganz voll, sodass Elektronen leicht durch Spannung in höhere erlaubte Niveaus innerhalb des Leitungsbandes gehoben werden können.
+\end{itemize}
