@@ -150,6 +150,9 @@ Sie korrespondieren jeweils mit den $\omega_{-}$ und $\omega_{+}$ Lösungen, wel
 In akustischen Moden schwingen alle Atome in Phase, während bei optischen Moden jedes Nachbaratom einen Phasenversatz von 180° relativ zum nächsten hat.
 Daher entsteht eine Bandlücke in einer bestimmten Frequenzgegend, sodass Wellen mit Frequenzen innerhalb dieser Bandlücke nicht propagieren können.
 
+Um die Dispersionsrelation von Phononen experimentell zu bestimmen, ist das beste Verfahren die inelastische Neutronenstreuung.
+Neutronen wechselwirken nicht mit den Elektronen im Kristall, jedoch regen sie effizient vibronische Zustände der Atomrümpfe an.
+
 \section{Debye-Modell}
 Das Debye-Modell gibt eine Methode zur Berechnung des Beitrags der Phononen zur spezifischen Wärme eines Kristallgitters vor.
 Es stellt sich heraus, dass dieser Beitrag der wesentliche ist.
@@ -260,3 +263,34 @@ Man kann aus diesen De-Haas-van-Alphen-Oszillationen nun die Periode $P$ messen 
 	P(B^{-1}) = \frac{2\pi e}{\hbar S_\text{F}}
 \end{equation*}
 dann die Fermi-Oberfläche.
+
+\section{Supraleiter}
+\subsection{BCS-Theorie}
+Um das Phänomen der Supraleitung zu erklären, werden zwei durch das Kristallgitter fliegende Elektronen als \textbf{Cooper-Paar} betrachtet.
+Das erste Elektron polarisiert das Kristallgitter auf seinem Weg geringfügig, indem es aufgrund der Coulombkraft die positiven Atomrümpfe leicht anzieht. Durch diese Verzerrung konzentriert
+sich im Bahnbereich des ersten Elektrons positive Ladung.
+Da die Atomrümpfe schwer und träge sind, kehren sie vergleichsweise langsam in ihre Ursprungslage zurück und bilden für das zweite Elektron noch für eine ausreichend lange Zeit eine anziehende
+Bahn, entlang derer es sich energetisch günstiger bewegen kann.
+Aufgrund dieser Wechselwirkung über das Kristallgitter werden die beiden Elektronen zu einem Cooper-Paar gekoppelt.
+Beide Elektronen besitzen als Folge eine geringfügig abgesenkte Energie, welche die Coulombabstoßung der Elektronen überkompensieren kann, solange die beiden Elektronen selbst einen ausreichend großen Abstand besitzen.
+
+Detaillierte Berechnungen fordern, dass Impuls und Spin beider Elektronen jeweils antiparallel sein müssen.
+Da somit die Impulse der beiden gekoppelten Elektronen zu Null summieren, besitzt das Cooper-Paar keine kinetische Energie.
+Damit kann es auch keine kinetische Energie durch Streuung an das Gitter abgeben, d. h. es existiert kein elektrischer Widerstand, welcher das Cooper-Paar bremst.
+Die Bildung eines Cooper-Paares ist also gewissermaßen ein Austausch virtueller Phononen (durch die Gitterpolarisation).
+
+Die Bindung der beiden Elektronen wird allerdings aufgebrochen, sobald die thermische Energie des Gitters $k_\text{B}T$ zu groß wird, also eine \textbf{Sprungtemperatur} $T_\text{c}$ überschritten wird.
+Außerdem kann die Bindung aufgebrochen werden, wenn ein zu großer Strom fließt, die kinetische Energie der Elektronen die Bindung also überschreitet.
+
+\subsection{Der Meißner-Ochsenfeld-Effekt}
+Supraleiter sind unter einer Sprungtemperatur nicht nur ideale Leiter, sondern auch perfekte Diamagneten.
+Sie verdrängen eine magnetische Flussdichte $B$ vollständig aus dem Material, sofern eine kritische Flussdichte $B_\text{c}$ nicht überschritten wird.
+Diese Verdrängung resultiert aus Strömen, die an der Oberfläche des Materials induziert werden und daher ein Gegenfeld erzeugen.
+
+\subsection{Klassifikation von Supraleitern}
+\begin{itemize}
+	\item \textbf{Supraleiter 1. Art} verdrängen das B-Feld vollständig für $B<B_\text{c}$.
+	\item \textbf{Supraleiter 2. Art} verdrängen das B-Feld nur noch bei kleineren Grenzwerten $B<B_{c1}<B_c$ vollständig, gehen aber erst für größere Grenzwerte $B>B_{c2}>B_c$ in den normalleitenden Zustand über.
+	Dringt das B-Feld teilweise in den Supraleiter ein, also $B_{c1}<B<B_{c2}$, so spricht man von der \textit{Shubnikow-Phase}.
+	Das B-Feld dringt dabei in sogenannten \textbf{Flussschläuchen} in das Material ein.
+\end{itemize}
